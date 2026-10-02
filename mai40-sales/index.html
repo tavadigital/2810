@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master AI 40+ | Umur Bukan Masalahnya. Caranya Belajar AI yang Salah.</title>
+<meta name="description" content="Aplikasi latihan AI 30 hari untuk pekerja dan pencari kerja usia 40+. 15 menit sehari, satu tool per hari, 601 prompt bahasa Indonesia, tanpa coding, tanpa bahasa Inggris.">
+<meta property="og:title" content="Master AI 40+ | Umur Bukan Masalahnya. Caranya Belajar AI yang Salah.">
+<meta property="og:description" content="Aplikasi latihan AI 30 hari untuk pekerja dan pencari kerja usia 40+. 15 menit sehari, satu tool per hari, 601 prompt bahasa Indonesia, tanpa coding, tanpa bahasa Inggris.">
+<meta name="theme-color" content="#1D4E89">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pri:#1D4E89;
+  --pri-deep:#12345E;
+  --pri-mid:#2B5F9E;
+  --pri-soft:#E8EEF6;
+  --acc:#E0892B;
+  --acc-deep:#A95F12;
+  --acc-text:#9A5A14;
+  --acc-soft:#FBEBD9;
+  --cta:#D9801F;
+  --cta-deep:#B5690F;
+  --cta-ink:#FFFFFF;
+  --green:#2E7D4F;
+  --green-soft:#E3F1E8;
+  --red:#B23B3B;
+  --bg:#F5F3EE;
+  --card:#FFFFFF;
+  --line:#E3DFD6;
+  --line-soft:#EEEBE4;
+  --ink:#1B2430;
+  --muted:#4A5565;
+  --muted-light:#7A8494;
+  --hl:#FFF1C2;
+  --head:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --body:'Atkinson Hyperlegible',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --radius:14px;
+  --radius-lg:20px;
+  --maxw:1120px;
+  --maxw-text:680px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--body);
+  font-size:17.5px;line-height:1.65;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;}
+h1,h2,h3,h4{margin:0;line-height:1.18;letter-spacing:-0.015em;color:var(--pri);font-family:var(--head);font-weight:800;}
+h1{font-size:clamp(31px,5.8vw,50px);}
+h2{font-size:clamp(25px,4.2vw,36px);}
+h3{font-size:clamp(21px,2.8vw,26px);font-weight:700;}
+h4{font-size:18px;font-weight:700;}
+p{margin:0 0 1rem;}
+p:last-child{margin-bottom:0;}
+strong{font-weight:700;color:var(--pri);}
+mark{background:var(--hl);color:inherit;padding:0 3px;border-radius:3px;}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+.narrow{max-width:var(--maxw-text);margin-left:auto;margin-right:auto;}
+section{padding:56px 0;}
+@media(min-width:768px){section{padding:76px 0;}}
+.sec-alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-deep{background:var(--pri-deep);color:#fff;}
+.sec-deep h2,.sec-deep h3{color:#fff;}
+.eyebrow{font-family:var(--head);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--pri-mid);margin:0 0 10px;}
+.eyebrow-acc{color:var(--acc-text);}
+.lead{font-size:clamp(17.5px,2vw,19.5px);color:var(--muted);}
+.sec-deep .lead{color:#C5D3E6;}
+.center{text-align:center;}
+
+/* header */
+.site-head{background:var(--card);border-bottom:1px solid var(--line);padding:14px 0;position:relative;z-index:5;}
+.logo{font-family:var(--head);font-size:21px;font-weight:800;letter-spacing:-0.02em;color:var(--pri);display:inline-flex;align-items:center;gap:7px;}
+.logo em{font-style:normal;font-size:14px;font-weight:800;color:#fff;background:var(--acc);padding:2px 8px 3px;border-radius:999px;line-height:1.2;letter-spacing:0;}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--cta);color:var(--cta-ink);text-decoration:none;
+  font-family:var(--head);font-weight:800;font-size:17.5px;letter-spacing:-0.01em;
+  padding:17px 28px;border-radius:12px;border:none;cursor:pointer;
+  box-shadow:0 2px 0 var(--cta-deep);
+  transition:transform .12s ease,box-shadow .12s ease;
+  text-align:center;width:100%;
+}
+@media(min-width:560px){.btn{width:auto;font-size:18.5px;padding:18px 34px;}}
+.btn:hover{transform:translateY(-1px);box-shadow:0 3px 0 var(--cta-deep);}
+.btn:active{transform:translateY(1px);box-shadow:0 1px 0 var(--cta-deep);}
+.btn:focus-visible{outline:3px solid var(--pri);outline-offset:3px;}
+.sec-deep .btn:focus-visible{outline-color:#fff;}
+.btn-note{font-size:15px;color:var(--muted);margin-top:12px;}
+.sec-deep .btn-note{color:#AFC0D8;}
+.cta-block{margin-top:26px;}
+
+/* hero */
+.hero{background:var(--card);padding:28px 0 44px;border-bottom:1px solid var(--line);}
+.hero-grid{display:block;}
+.hero-img{margin:22px -20px 24px;}
+@media(min-width:900px){
+  .hero{padding:64px 0 72px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1fr 460px;
+    grid-template-areas:"hd img" "rest img";
+    column-gap:56px;align-items:center;
+  }
+  .hero-hd{grid-area:hd;align-self:end;}
+  .hero-rest{grid-area:rest;align-self:start;padding-top:18px;}
+  .hero-img{grid-area:img;margin:0;align-self:center;}
+  .hero-img img{border-radius:var(--radius-lg);}
+}
+.hero-bullets{list-style:none;padding:0;margin:22px 0 0;}
+.hero-bullets li{position:relative;padding-left:30px;margin-bottom:12px;font-size:17px;color:var(--ink);}
+.hero-bullets li::before{
+  content:"";position:absolute;left:0;top:9px;width:16px;height:16px;border-radius:50%;
+  background:var(--green-soft);border:2px solid var(--green);
+}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;font-size:15px;color:var(--muted);font-weight:700;}
+.hero-facts span{white-space:nowrap;}
+
+/* cards */
+.grid{display:grid;gap:18px;}
+@media(min-width:760px){.grid-3{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr);}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+.sec-alt .card{background:var(--bg);}
+.card-quote{font-family:var(--head);font-size:21px;font-weight:800;color:var(--pri);margin:0 0 10px;line-height:1.3;}
+.card p{font-size:16.5px;color:var(--muted);}
+
+/* pilar metode */
+.pilar{border-left:4px solid var(--pri-mid);padding:4px 0 4px 18px;margin-bottom:20px;}
+.pilar:nth-child(2){border-color:var(--acc);}
+.pilar:nth-child(3){border-color:var(--green);}
+.pilar:nth-child(4){border-color:var(--pri-deep);}
+.pilar h4{margin-bottom:4px;color:var(--pri);}
+.pilar p{font-size:16.5px;color:var(--muted);margin:0;}
+.golden{margin-top:28px;font-family:var(--head);font-size:24px;font-weight:800;color:var(--pri);margin-bottom:6px;line-height:1.3;}
+
+/* steps */
+.step{display:grid;gap:20px;padding:28px 0;border-top:1px solid var(--line);}
+.step:first-of-type,.narrow + .step{border-top:none;}
+@media(min-width:800px){
+  .step{grid-template-columns:1fr 300px;gap:56px;align-items:center;}
+  .step.dimg{grid-template-columns:1fr 1.35fr;gap:48px;}
+  .step-img{order:2;}
+}
+.step-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;
+  background:var(--pri);color:#fff;font-family:var(--head);font-weight:800;font-size:16px;margin-bottom:12px;
+}
+.step-copy p{color:var(--muted);margin-top:10px;}
+.step-wide{display:block;}
+.step-wide .step-copy{max-width:var(--maxw-text);}
+
+/* screenshot frames */
+.shot{border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:0 1px 3px rgba(29,78,137,.08);}
+.shot-r{max-width:300px;width:100%;margin-left:auto;margin-right:auto;}
+@media(min-width:800px){.step .shot-r{max-width:100%;}}
+@media(min-width:860px){.feat .shot-r{max-width:100%;}}
+.akses-shot .shot{max-width:320px;width:100%;margin:0 auto;}
+@media(min-width:800px){.akses-shot .shot{max-width:760px;}}
+[data-zoom]{cursor:zoom-in;}
+.m-only{display:inline;}
+@media(min-width:700px){.m-only{display:none;}}
+figure{margin:0;}
+figcaption{font-size:14px;color:var(--muted);margin-top:8px;text-align:center;}
+
+/* feature rows */
+.feat{display:grid;gap:24px;padding:40px 0;border-top:1px solid var(--line);}
+@media(min-width:860px){
+  .feat{grid-template-columns:1fr 320px;gap:64px;align-items:center;}
+  .feat-img{order:2;}
+  .feat.flip{grid-template-columns:320px 1fr;}
+  .feat.flip .feat-img{order:1;}
+  .feat.flip .feat-copy{order:2;}
+  .feat.dimg{grid-template-columns:1fr 1.35fr;gap:48px;}
+  .feat.dimg.flip{grid-template-columns:1.35fr 1fr;}
+}
+.feat-copy h3{margin-bottom:12px;}
+.feat-copy p{color:var(--muted);font-size:17px;}
+.feat-wide{display:block;padding:40px 0;border-top:1px solid var(--line);}
+.feat-wide .feat-copy{max-width:var(--maxw-text);}
+.toollist{list-style:none;padding:0;margin:14px 0 0;}
+.toollist li{position:relative;padding-left:26px;margin-bottom:10px;font-size:16.5px;color:var(--muted);}
+.toollist li::before{content:"";position:absolute;left:0;top:10px;width:10px;height:10px;border-radius:3px;background:var(--acc);}
+.toollist b{color:var(--pri);}
+
+/* nyaman */
+.nyaman{display:grid;gap:18px;}
+@media(min-width:640px){.nyaman{grid-template-columns:repeat(2,1fr);}}
+.nyaman .card h4{margin-bottom:6px;}
+
+/* jelas dari awal */
+.clear-card h3{margin-bottom:10px;}
+.clear-card p{color:var(--muted);font-size:17px;}
+.clear-yes{border-top:4px solid var(--green);}
+.clear-no{border-top:4px solid var(--acc);}
+
+/* fit lists */
+.fitlist{list-style:none;padding:0;margin:0;}
+.fitlist li{position:relative;padding-left:30px;margin-bottom:13px;font-size:17px;}
+.fitlist li::before{position:absolute;left:0;top:0;font-weight:800;font-size:17px;}
+.fit-yes li::before{content:"✓";color:var(--green);}
+.fit-no li::before{content:"✕";color:var(--red);}
+
+/* table */
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;border:1px solid var(--line);border-radius:var(--radius);}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:15.5px;background:var(--card);}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
+thead th{font-family:var(--head);font-size:13.5px;font-weight:700;color:var(--muted);border-bottom:2px solid var(--line);}
+thead th.hl{color:var(--pri);}
+tbody td.hl{font-weight:700;color:var(--pri);background:var(--pri-soft);}
+tbody th{font-weight:700;color:var(--ink);width:22%;}
+
+/* testimoni */
+.testi-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px 20px 6px;margin:0 -20px;}
+.testi-grid::-webkit-scrollbar{display:none;}
+.testi-grid figure{flex:0 0 78%;scroll-snap-align:center;}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:16px;}
+.testi-dots button{width:8px;height:8px;padding:0;border:none;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s ease,width .2s ease;}
+.testi-dots button.on{background:var(--pri);width:22px;border-radius:5px;}
+.testi-dots button:focus-visible{outline:2px solid var(--pri);outline-offset:3px;}
+@media(min-width:700px){
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;overflow:visible;padding:0;margin:0;}
+  .testi-grid figure{flex:none;}
+  .testi-dots{display:none;}
+}
+.testi-grid img{width:100%;height:auto;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:0 1px 3px rgba(29,78,137,.08);}
+.testi-grid figcaption{text-align:left;font-size:14.5px;margin-top:10px;}
+.testi-grid figcaption b{color:var(--pri);}
+
+/* price */
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 22px;max-width:620px;margin:0 auto;}
+@media(min-width:640px){.price-card{padding:36px;}}
+.price-card h3{font-size:clamp(21px,2.6vw,24px);}
+.val-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:15.5px;}
+.val-row span:last-child{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.val-total{display:flex;justify-content:space-between;gap:16px;padding:16px 0 0;font-weight:700;color:var(--pri);}
+.val-total s{color:var(--muted-light);font-weight:700;}
+.price-now{text-align:center;background:var(--acc-soft);border-radius:var(--radius);padding:22px;margin:24px 0 0;}
+.price-now .amt{font-family:var(--head);font-size:clamp(36px,8vw,50px);font-weight:800;color:var(--pri);letter-spacing:-0.04em;line-height:1.1;}
+.price-now .sub{font-size:15px;color:var(--muted);margin-top:4px;}
+.price-divider{font-size:16px;color:var(--muted);text-align:center;margin-top:18px;padding-top:18px;border-top:1px solid var(--line-soft);}
+.price-divider b{display:block;color:var(--pri);margin-bottom:4px;}
+
+/* akses */
+.akses .card{text-align:left;}
+.akses .card p{margin-top:8px;}
+.akses-shot{margin-top:30px;}
+.url{font-weight:700;color:var(--pri);white-space:nowrap;}
+
+/* faq */
+.faq{border-top:1px solid var(--line);}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;padding:18px 34px 18px 0;position:relative;font-family:var(--head);font-weight:700;font-size:17px;color:var(--pri);list-style:none;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"";position:absolute;right:6px;top:26px;width:9px;height:9px;
+  border-right:2.5px solid var(--pri-mid);border-bottom:2.5px solid var(--pri-mid);
+  transform:rotate(45deg);transition:transform .18s ease;
+}
+.faq details[open] summary::after{transform:rotate(-135deg);top:28px;}
+.faq summary:focus-visible{outline:2px solid var(--pri);outline-offset:2px;}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:17px;}
+
+/* closing */
+.closing-line{font-family:var(--head);font-size:25px;font-weight:800;color:#fff;margin-top:24px;line-height:1.3;}
+
+/* sticky bar */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;
+  background:var(--card);border-top:1px solid var(--line);padding:10px 16px;
+  box-shadow:0 -3px 14px rgba(29,78,137,.10);
+  display:flex;align-items:center;gap:12px;
+  transform:translateY(110%);transition:transform .25s ease;
+}
+.sticky-cta.on{transform:translateY(0);}
+.sticky-cta .sp{flex:1;min-width:0;}
+.sticky-cta .sp b{display:block;font-family:var(--head);font-size:17px;color:var(--pri);line-height:1.2;}
+.sticky-cta .sp small{font-size:13px;color:var(--muted);}
+.sticky-cta .btn{width:auto;padding:14px 20px;font-size:15.5px;flex-shrink:0;}
+@media(min-width:900px){.sticky-cta{display:none;}}
+body.has-sticky{padding-bottom:82px;}
+@media(min-width:900px){body.has-sticky{padding-bottom:0;}}
+
+/* footer */
+.site-foot{background:var(--card);border-top:1px solid var(--line);padding:30px 0;text-align:center;}
+.site-foot .logo{display:inline-flex;margin-bottom:6px;}
+.site-foot small{display:block;font-size:14px;color:var(--muted-light);}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,20,36,.92);display:none;align-items:center;justify-content:center;padding:56px 12px 20px;}
+.lb.on{display:flex;}
+.lb-inner{max-width:1100px;width:100%;max-height:100%;overflow:auto;-webkit-overflow-scrolling:touch;border-radius:10px;}
+.lb img{width:auto;max-width:100%;max-height:84vh;margin:0 auto;border-radius:10px;}
+.lb-close{
+  position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;
+  background:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+}
+.lb-close:focus-visible{outline:3px solid var(--acc);outline-offset:2px;}
+.lb-close svg{width:18px;height:18px;}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <div class="logo">Master AI <em>40+</em></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-hd">
+        <h1>Umur bukan masalahnya. Caranya belajar AI yang salah.</h1>
+      </div>
+      <div class="hero-img">
+        <img src="img/hero-mockup.webp" alt="Master AI 40+, aplikasi latihan AI 15 menit sehari untuk usia 40+" width="980" height="1232" fetchpriority="high">
+      </div>
+      <div class="hero-rest">
+        <p class="lead">Master AI 40+ adalah aplikasi di HP: 30 hari, 15 menit sehari, satu tool AI per hari, seluruhnya berbahasa Indonesia. Yang kamu latih hari ini langsung bisa dipakai di kerjaan besok pagi.</p>
+        <ul class="hero-bullets">
+          <li>Rapat sebut AI lagi dan kamu cuma bisa ngangguk? Kamus AI: 105 istilah, masing-masing satu kalimat plus analoginya di kantor. Yang sering muncul di rapat sudah ditandai.</li>
+          <li>Disuruh atasan pakai AI, tapi nggak diajarin? Hari 1 sampai 7: draf email, laporan, rumus Excel, notulen rapat. Prompt-nya bahasa Indonesia, tinggal salin, ganti isi kurungnya.</li>
+          <li>Lamaran mentok di syarat usia? Jalur Kembali Bekerja: CV 40+ yang menonjolkan pencapaian bukan tahun lahir, surat lamaran, dan 40 kartu latihan wawancara, termasuk pertanyaan soal umur.</li>
+        </ul>
+        <div class="cta-block">
+          <a class="btn" href="checkout.html">Mulai Hari 1 → Rp127.000</a>
+          <p class="btn-note">Sekali bayar. Tanpa langganan. Buka dari browser HP atau laptop, tanpa install.</p>
+        </div>
+        <div class="hero-facts">
+          <span>30 hari, 15 menit sehari</span>
+          <span>22 tool, 601 prompt bahasa Indonesia</span>
+          <span>3 jalur, 7 bidang kerja</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:34px;">
+      <h2>Baca tiga ini. Kalau ada satu yang kejadian bulan ini, kamu di tempat yang benar.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <p class="card-quote">“Kok bisa 4 jam?”</p>
+        <p>Rapat Senin pagi. Rekan kerja yang umurnya 25 presentasi rekap penjualan 5 cabang, rapi, ada grafiknya. Dia bilang ngerjainnya 4 jam. Pekerjaan yang sama, kamu biasanya 3 hari. Atasan yang umurnya di bawah kamu nengok ke arahmu sambil senyum. Kamu balas senyum. Di dalam, kamu mikir: saya kalah sama anak kemarin sore.</p>
+      </div>
+      <div class="card">
+        <p class="card-quote">“Usia maksimal 35 tahun.”</p>
+        <p>Lamaran ke-30 sejak surat efisiensi itu. Kamu buka lowongannya, posisinya pas, pengalamanmu lebih dari cukup. Lalu baris itu lagi. Dua puluh tahun kerja berhenti di satu baris syarat. Kamu tutup HP, dan besoknya buka lagi lowongan yang lain, dengan perasaan yang sama.</p>
+      </div>
+      <div class="card">
+        <p class="card-quote">“Ya ampun, gaptek banget sih.”</p>
+        <p>Kamu minta tolong anak nunjukin cara pakai ChatGPT. Dia buka, ngetik cepat dalam bahasa Inggris, selesai, HP dikembalikan. Kamu tanya lagi satu hal, dia menghela napas. Besoknya kamu coba sendiri, contoh prompt-nya bahasa Inggris semua, dan aplikasinya kamu hapus.</p>
+      </div>
+    </div>
+    <p class="narrow lead center" style="margin-top:30px;">Tiga adegan ini kelihatan beda. Akarnya satu. Dan bukan umurmu.</p>
+  </div>
+</section>
+
+<!-- REFRAME -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Yang salah bukan kepalamu. Yang salah formatnya.</h2>
+      <p style="margin-top:18px;">Coba ingat semua cara yang pernah kamu coba. Tutorial YouTube yang loncat dari satu tool ke tool lain tanpa urutan. Contoh prompt yang semuanya bahasa Inggris. Istilah yang nggak pernah dijelaskan: token, prompt, agen, LLM. Kelas yang janjinya income ratusan juta. Dan anak sendiri yang nggak sabar.</p>
+      <p>Semuanya dibuat untuk orang yang belajar dengan cara anak muda: cepat, loncat-loncat, dan asumsinya kamu sudah paham istilahnya. Nggak ada yang dibuat untuk orang yang punya pekerjaan besok pagi, 15 menit waktu luang, dan ingin belajar pelan tapi nempel.</p>
+      <p>Master AI 40+ dibuat dari sisi sebaliknya. Namanya <strong>Rute 30 Hari “1 Hari 1 Tool”</strong>, dan isinya empat hal:</p>
+
+      <div style="margin-top:32px;">
+        <div class="pilar"><h4>Satu tool sehari</h4><p>Hari ini ChatGPT, besok Gemini, lusa rumus Excel. Bukan 20 tool sekaligus. Satu layar, satu langkah, 15 menit.</p></div>
+        <div class="pilar"><h4>Prompt bahasa Indonesia, tinggal ganti kurung</h4><p>Setiap prompt sudah jadi. Kamu cuma mengganti bagian dalam [kurung] dengan isi pekerjaanmu, lalu salin.</p></div>
+        <div class="pilar"><h4>Kasus di bidangmu sendiri</h4><p>Admin, keuangan, HR, sales, operasional, guru, atau usaha rumahan. Contoh dan tugasnya ikut bidang yang kamu pilih, bukan contoh umum.</p></div>
+        <div class="pilar"><h4>Hasil tersimpan jadi bukti</h4><p>Setiap tugas yang kamu selesaikan disimpan. Di hari 28 sampai 30, semuanya dirakit jadi sesuatu yang bisa ditunjukkan ke atasan, HRD, atau klien pertama.</p></div>
+      </div>
+
+      <p class="golden">Pengalaman 20 tahunmu bukan beban di sini. Itu bahan baku prompt-nya.</p>
+      <p style="color:var(--muted);">AI yang dipakai anak umur 25 nggak tahu cara kerja kantormu. Kamu tahu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARA KERJA -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:10px;">
+      <h2>Kamu nggak perlu nyusun jadwal belajar. Aplikasinya yang nyusun.</h2>
+    </div>
+
+    <div class="step dimg">
+      <div class="step-copy">
+        <div class="step-num">1</div>
+        <h3>Tes Posisi, sekitar 3 menit</h3>
+        <p>Enam pertanyaan: situasimu sekarang (masih bekerja, baru kena efisiensi, di rumah, atau menjelang pensiun), tujuan 3 bulan ke depan, bidang kerja, pakai HP saja atau ada laptop, dan sudah pernah coba AI atau belum.</p>
+        <p>Dari sini aplikasi menyusun Rute 30 Hari-mu: jalur yang disarankan, contoh kasus sesuai bidangmu, dan penanda hari mana yang lebih nyaman dikerjakan di laptop.</p>
+      </div>
+      <div class="step-img">
+        <picture><source media="(min-width:800px)" srcset="img/hasil-rute-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/hasil-rute.webp" alt="Layar Rute 30 Harimu sudah siap: jalur Bertahan di Kantor, contoh disesuaikan bidang Keuangan, 9 hari ditandai lebih nyaman di laptop" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="step dimg">
+      <div class="step-copy">
+        <div class="step-num">2</div>
+        <h3>Tiap hari, buka halaman Hari Ini</h3>
+        <p>Latihan hari ini sudah ada di layar pertama: kenapa tool ini penting untukmu, langkah bergambar satu per layar, prompt siap pakai, dan tugas 10 menit.</p>
+        <p>Kalau ada langkah yang biasanya bikin takut salah klik, ada label hijau “Aman, tidak ada yang rusak”.</p>
+      </div>
+      <div class="step-img">
+        <picture><source media="(min-width:800px)" srcset="img/hari-ini-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/hari-ini.webp" alt="Halaman Hari Ini: Hari 12, Canva dan Ideogram untuk logo sederhana dan aset kantor, 20 menit, tombol Mulai Latihan" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="step step-wide">
+      <div class="step-copy">
+        <div class="step-num">3</div>
+        <h3>Tekan Selesai, hasilnya tersimpan</h3>
+        <p>Hasil tugasmu masuk ke Hasil Saya. Hari bolong nggak mengulang dari nol. Dan di hari 28 sampai 30, sesuai jalurmu, semua hasil itu dirakit: laporan sebelum dan sesudah untuk atasan, CV dan surat lamaran, atau portofolio untuk klien pertama.</p>
+      </div>
+    </div>
+
+    <div class="cta-block narrow center" style="margin-top:34px;">
+      <a class="btn" href="checkout.html">Mulai Hari 1 → Rp127.000</a>
+    </div>
+  </div>
+</section>
+
+<!-- FITUR -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center">
+      <h2>Yang kamu pakai setiap hari</h2>
+    </div>
+
+    <div class="feat dimg" style="border-top:none;">
+      <div class="feat-copy">
+        <p class="eyebrow">Latihan Harian</p>
+        <h3>Senin pagi, atasan minta laporan bulanan dirapikan sebelum jam 10. Kamu buka Hari Ini.</h3>
+        <p style="margin-top:12px;">Setiap hari dibuka dengan satu paragraf: kenapa tool ini penting untuk pekerjaanmu, pakai kasus kantor, bukan teori. Lalu 4 sampai 7 langkah bergambar, satu langkah per layar, dengan tombol Buka Tool yang langsung ke versi gratisnya.</p>
+        <p>Tiga prompt siap pakai dengan tombol salin. Tugas 10 menit yang hasilnya nyata: email terkirim, rumus jadi, slide selesai.</p>
+        <p>Dan bagian “Kalau ada kendala” untuk kejadian yang paling sering: tombolnya nggak ketemu, diminta bayar, hasilnya bahasa Inggris, HP-nya lambat.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/langkah-aman-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/langkah-aman.webp" alt="Langkah 2 dari 7: Ideogram untuk logo dengan tulisan, dengan label hijau Aman, tidak ada yang rusak" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat flip dimg">
+      <div class="feat-copy">
+        <p class="eyebrow eyebrow-acc">Bank Prompt dan Racik Prompt</p>
+        <h3>Butuh email menolak permintaan klien tanpa bikin dia tersinggung? Ada. Tinggal ganti kurung.</h3>
+        <p style="margin-top:12px;">601 prompt berbahasa Indonesia dalam 14 kategori: email dan pesan kerja, riset dan ringkas dokumen, Excel dan data, rapat dan notulen, dokumen dan presentasi, desain, suara dan video, konten, usul ke atasan, CV dan lamaran, jasa dan klien, sampai cara memperbaiki hasil AI yang kurang pas. Semua ada tombol salin dan bisa ditandai favorit.</p>
+        <p>Kalau yang kamu butuhkan belum ada, buka Racik Prompt: isi tiga kotak, tujuan, konteks, dan bentuk hasil yang kamu mau. Aplikasi menyusunnya jadi satu prompt utuh.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/bank-prompt-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/bank-prompt.webp" alt="Bank Prompt: isi kolom kepala divisi, nama laporan, bulan, tanggal, dan dampak, lalu prompt email pengingat tegas tersusun otomatis" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat-wide">
+      <div class="feat-copy">
+        <p class="eyebrow">Kamus AI</p>
+        <h3>Besok rapat bahas “agen AI”. Malam ini kamu sudah tahu artinya, dan analoginya di kantor.</h3>
+        <p style="margin-top:12px;">105 istilah, masing-masing satu kalimat arti plus satu analogi kantor. Contoh: AI itu seperti staf baru yang sangat cepat dan banyak membaca, tapi tetap perlu diarahkan dan diperiksa pekerjaannya. Istilah yang sering muncul di rapat ditandai khusus. Yang penting buatmu bisa disimpan.</p>
+      </div>
+    </div>
+
+    <div class="feat-wide">
+      <div class="feat-copy">
+        <p class="eyebrow eyebrow-acc">Rute 30 Hari dan Tinjauan Mingguan</p>
+        <h3>Minggu ini cuma sempat 4 hari. Nggak apa-apa. Rutenya nunggu, bukan mengulang.</h3>
+        <p style="margin-top:12px;">Peta 30 hari dalam 4 minggu: AI untuk pekerjaan harian, dokumen dan visual, suara dan video, lalu otomatisasi dan kebiasaan. Hari 28 sampai 30 khusus jalurmu. Tiap akhir minggu ada tinjauan singkat: apa yang sudah jalan, apa yang perlu diulang. Hari yang bolong nggak menghapus progres.</p>
+      </div>
+    </div>
+
+    <div class="feat dimg">
+      <div class="feat-copy">
+        <p class="eyebrow">Alat Jalurmu</p>
+        <h3>Ini bagian yang nggak akan pernah bisa ada di PDF.</h3>
+        <p style="margin-top:12px;">Tujuh alat yang menyusun hasil dari isianmu sendiri:</p>
+        <ul class="toollist">
+          <li><b>Kalkulator 3 Hari Jadi 3 Jam.</b> Bandingkan cara lama dan cara baru untuk satu pekerjaan rutin, termasuk waktu memeriksa hasil AI. Keluar angka jam yang dihemat per bulan.</li>
+          <li><b>Kartu Sebelum/Sesudah.</b> Satu halaman PDF dari angka kalkulator tadi. Ini yang kamu tunjukkan ke atasan, bukan cerita.</li>
+          <li><b>Skrip Usul ke Atasan.</b> Tiga kalimat untuk mengusulkan pemakaian AI di divisi tanpa terdengar menggurui atau mengancam rekan.</li>
+          <li><b>Pembuat CV 40+.</b> Format yang menonjolkan pencapaian 10 tahun terakhir, bukan tahun lahir. Unduh PDF atau DOCX.</li>
+          <li><b>Pembuat Surat Lamaran.</b> Isi, pilih nada, unduh.</li>
+          <li><b>40 Kartu Latihan Wawancara.</b> Termasuk kelompok khusus soal usia dan pengalaman panjang, soal teknologi dan AI, serta soal jeda kerja. Tiap kartu ada maksud pertanyaannya, kerangka jawaban, dan contoh.</li>
+          <li><b>Portofolio PDF.</b> Pilih hasil latihanmu, urutkan, unduh. Untuk klien pertama atau HRD.</li>
+        </ul>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/alat-jalur-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/alat-jalur.webp" alt="Hasil Saya, tab Alat Jalurku: Kalkulator 3 Hari Jadi 3 Jam, Kartu Sebelum/Sesudah, Skrip Usul ke Atasan untuk Jalur A" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat flip dimg">
+      <div class="feat-copy">
+        <p class="eyebrow eyebrow-acc">Hasil Saya dan Sertifikat</p>
+        <h3>Pengalamanmu nggak kelihatan bukan karena nggak ada. Karena nggak pernah dikumpulkan.</h3>
+        <p style="margin-top:12px;">Semua hasil tugas tersimpan di satu tempat, bisa diberi bintang, bisa dibuka lagi kapan saja. Di akhir 30 hari ada Tinjauan 30 Hari dan sertifikat penyelesaian atas namamu sendiri, bisa diunduh.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/sertifikat-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/sertifikat.webp" alt="Sertifikat Penyelesaian Master AI 40+ atas nama Hendra Wijaya" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat dimg">
+      <div class="feat-copy">
+        <p class="eyebrow">Info Pembaruan Tool</p>
+        <h3>Tool-nya ganti nama, jadi berbayar, atau hilang? Aplikasinya yang kasih tahu, lengkap dengan penggantinya.</h3>
+        <p style="margin-top:12px;">Tool AI berubah cepat. Di aplikasi ini, hari yang terdampak diberi lencana Diperbarui, langkahnya diperbarui, dan selalu ada tool cadangan gratis.</p>
+        <p>Ini alasan kenapa yang kamu beli adalah aplikasi, bukan file PDF yang isinya kedaluwarsa tiga bulan lagi.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/pembaruan-tool-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/pembaruan-tool.webp" alt="Catatan Diperbarui 1 Oktober 2026 di halaman Hari Ini: Midjourney diganti Leonardo.Ai dan Ideogram, Adobe Firefly dan Krea diganti Canva dan Ideogram" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NYAMAN -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Yang bikin nyaman dipakai tiap hari</h2>
+    </div>
+    <div class="nyaman">
+      <div class="card"><h4>Teks Besar dan Sangat Besar</h4><p>Hurufnya sudah lebih besar dari aplikasi pada umumnya sejak awal, dan masih bisa dibesarkan dua tingkat lagi dari Pengaturan.</p></div>
+      <div class="card"><h4>Kontras Tinggi dan Mode Pelan</h4><p>Warna lebih tegas, garis lebih tebal, animasi dimatikan. Buat yang matanya cepat lelah di layar.</p></div>
+      <div class="card"><h4>HP dan laptop</h4><p>Tampilannya menyesuaikan. Hari yang lebih nyaman di laptop diberi penanda, tapi tetap ada cara untuk dikerjakan dari HP.</p></div>
+      <div class="card"><h4>Data tersimpan di HP-mu</h4><p>Mau ganti HP? Simpan cadangannya, lalu pulihkan di HP baru dengan kode yang sama.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPAYA JELAS -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Supaya jelas dari awal</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card clear-card clear-yes">
+        <h3>Master AI 40+ bisa</h3>
+        <p>menyusun rute belajarmu dari Tes Posisi, menuntunmu 30 hari satu langkah per layar, menyediakan prompt bahasa Indonesia yang tinggal dipakai, menyimpan hasil latihanmu jadi bukti, dan memberi tahu saat ada tool yang berubah.</p>
+      </div>
+      <div class="card clear-card clear-no">
+        <h3>Master AI 40+ bukan</h3>
+        <p>chat AI, dan di dalamnya tidak ada AI. Dia pelatihnya. Tool AI yang kamu latih (ChatGPT, Gemini, Canva, dan lainnya) adalah layanan terpisah yang gratis, dibuka di tab lain. Aplikasi ini juga bukan mentor, tidak ada orang di belakangnya yang menjawab pertanyaan, bukan kursus bersertifikat resmi, dan tidak menjanjikan kamu diterima kerja atau berpenghasilan sekian. Yang dijanjikan adalah kemampuan yang terbentuk kalau kamu jalani 30 harinya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNTUK SIAPA -->
+<section>
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 style="margin-bottom:16px;">Cocok kalau</h3>
+        <ul class="fitlist fit-yes">
+          <li>Kamu masih bekerja, kantormu mulai mewajibkan AI, dan nggak ada yang ngajarin.</li>
+          <li>Kamu pernah install ChatGPT lalu nyerah karena contoh dan istilahnya bahasa Inggris semua.</li>
+          <li>Kamu sedang melamar lagi di usia 40+ dan ingin pengalaman 20 tahunmu terbaca di CV dan wawancara.</li>
+          <li>Kamu di rumah atau menjelang pensiun, ingin penghasilan tambahan dari skill yang bisa dipelajari tanpa coding.</li>
+          <li>Kamu capek minta diajari anak.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:16px;">Bukan untuk kamu kalau</h3>
+        <ul class="fitlist fit-no">
+          <li>Kamu cari aplikasi yang mengerjakan tugasmu otomatis tanpa kamu latihan. Di sini kamu yang mengerjakan, aplikasinya yang menuntun.</li>
+          <li>Kamu mau belajar coding atau membangun AI sendiri.</li>
+          <li>Kamu berharap ada mentor yang bisa ditanya kapan saja.</li>
+          <li>Kamu nggak punya 15 menit sehari selama sebulan.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERBANDINGAN -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Kenapa aplikasi, bukan cara yang sekarang.</h2>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Tutorial YouTube</th>
+            <th>Kelas video atau Zoom</th>
+            <th>Minta diajari anak</th>
+            <th class="hl">Master AI 40+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th>Bahasa contoh prompt</th><td>Campur, banyak Inggris</td><td>Tergantung pengajar</td><td>Inggris, ngetiknya cepat</td><td class="hl">Indonesia semua, tinggal ganti kurung</td></tr>
+          <tr><th>Urutan belajar</th><td>Loncat-loncat, kamu susun sendiri</td><td>Ikut jadwal batch</td><td>Sekali tunjukin, selesai</td><td class="hl">30 hari, satu tool sehari, disusun untukmu</td></tr>
+          <tr><th>Waktu per hari</th><td>Nggak terbatas, sering kebablasan</td><td>1 sampai 2 jam per sesi</td><td>Tergantung mood dia</td><td class="hl">15 menit</td></tr>
+          <tr><th>Sesuai bidang kerjamu</th><td>Tidak</td><td>Umum</td><td>Dia nggak tahu kerjaanmu</td><td class="hl">Ya, 7 bidang dipilih di awal</td></tr>
+          <tr><th>Kalau tool-nya berubah</th><td>Videonya tetap lama</td><td>Rekamannya tetap lama</td><td>Tanya lagi</td><td class="hl">Aplikasi yang kasih tahu, plus pengganti</td></tr>
+          <tr><th>Hasil latihan tersimpan</th><td>Tidak</td><td>Tidak</td><td>Tidak</td><td class="hl">Ya, jadi portofolio dan sertifikat</td></tr>
+          <tr><th>Cara bayar</th><td>Gratis, bayarnya waktu</td><td>Rp149.000 sampai 249.000, kadang per batch</td><td>Gratis, kalau dia lagi sabar</td><td class="hl">Rp127.000 sekali, selamanya</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Cerita dari yang sudah pakai.</h2>
+      <p class="lead" style="margin-top:12px;"><span class="m-only">Geser untuk melihat cerita lainnya. </span>Nomor disensor untuk menjaga privasi.</p>
+    </div>
+    <div class="testi-grid">
+      <figure>
+        <img src="img/testi1.webp" alt="Screenshot WhatsApp: pengguna usia 45 dipanggil interview setelah 3 bulan melamar, menjawab pertanyaan soal usia dengan pengalaman 20 tahun dan menunjukkan hasil latihan AI" width="392" height="812" loading="lazy">
+        <figcaption>Interview di usia 45, 3 bulan lamaran baru ini yang nyangkut. <b>Kartu Wawancara dan Pembuat CV 40+</b></figcaption>
+      </figure>
+      <figure>
+        <img src="img/testi2.webp" alt="Screenshot WhatsApp: pengguna membuat video ucapan ulang tahun untuk cucunya di Balikpapan sendiri, dengan ucapan dirapikan AI dan rekaman suara sendiri" width="392" height="812" loading="lazy">
+        <figcaption>Video ucapan ulang tahun untuk cucu di Balikpapan, pertama kali bikin sendiri. <b>Minggu 3: suara dan video</b></figcaption>
+      </figure>
+      <figure>
+        <img src="img/testi3.webp" alt="Screenshot WhatsApp: guru menyusun 40 soal pilihan ganda untuk STS dalam sejam memakai prompt dari Bank Prompt, biasanya lembur" width="392" height="812" loading="lazy">
+        <figcaption>40 soal pilihan ganda untuk STS selesai sejam, biasanya lembur. <b>Bank Prompt</b></figcaption>
+      </figure>
+    </div>
+    <div class="testi-dots" id="testiDots" aria-hidden="true">
+      <button type="button" class="on" data-i="0" aria-label="Testimoni 1"></button>
+      <button type="button" data-i="1" aria-label="Testimoni 2"></button>
+      <button type="button" data-i="2" aria-label="Testimoni 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- HARGA -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Kelas video Rp149.000 sampai 249.000, isinya nggak pernah berubah. Bootcamp mulai Rp1 juta, isinya coding. Yang ini Rp127.000, sekali, dan ikut berubah saat tool-nya berubah.</h2>
+    </div>
+    <div class="price-card">
+      <h3 class="center" style="margin-bottom:20px;">Yang kamu dapat begitu masuk</h3>
+      <div class="val-row"><span>Rute 30 Hari “1 Hari 1 Tool”, 22 tool, disusun dari Tes Posisi-mu</span><span>Rp147.000</span></div>
+      <div class="val-row"><span>Bank Prompt 601 prompt bahasa Indonesia + Racik Prompt</span><span>Rp100.000</span></div>
+      <div class="val-row"><span>7 Alat Jalur: Pembuat CV 40+, Surat Lamaran, 40 Kartu Wawancara, Kalkulator 3 Hari Jadi 3 Jam, Kartu Sebelum/Sesudah, Skrip Usul ke Atasan, Portofolio PDF</span><span>Rp120.000</span></div>
+      <div class="val-row"><span>Kamus AI 105 istilah dengan analogi kantor</span><span>Rp30.000</span></div>
+      <div class="val-row"><span>Hasil Saya, Tinjauan 30 Hari, dan sertifikat atas namamu</span><span>Rp40.000</span></div>
+      <div class="val-row"><span>Info Pembaruan Tool, selamanya</span><span>Rp40.000</span></div>
+      <div class="val-row"><span>Teks Besar, Kontras Tinggi, Mode Pelan, cadangan data</span><span>Rp20.000</span></div>
+      <div class="val-total"><span>Total nilai wajar</span><span><s>Rp497.000</s></span></div>
+      <div class="price-now">
+        <div style="font-size:15px;color:var(--muted);font-weight:700;">Harga hari ini</div>
+        <div class="amt">Rp127.000</div>
+        <div class="sub">Sekali bayar. Akses selamanya. Semua fitur terbuka, tanpa paket basic dan premium.</div>
+      </div>
+      <p class="price-divider"><b>Rp127.000 untuk 30 hari latihan.</b>Sekitar Rp4.300 per hari. Setelah itu nggak ada tagihan apa-apa, dan aplikasinya tetap kamu pakai untuk Bank Prompt, Kamus, dan Alat Jalur.</p>
+      <div class="cta-block center">
+        <a class="btn" href="checkout.html">Ambil Akses Master AI 40+ → Rp127.000</a>
+        <p class="btn-note">Panduan Akses berisi kode masuk dikirim ke email yang kamu pakai saat order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARA DAPAT AKSES -->
+<section class="akses">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Dari bayar sampai Hari 1, cuma tiga langkah.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="step-num">1</div>
+        <h4>Selesaikan pembayaran</h4>
+        <p>Bisa pakai QRIS, transfer bank, atau e-wallet.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">2</div>
+        <h4>Cek email kamu</h4>
+        <p>Begitu pembayaran terkonfirmasi, kamu diarahkan ke halaman sukses Master AI 40+, dan Panduan Akses berisi kode masuk dikirim ke email kamu. Kalau belum ada di kotak masuk, cek folder Spam atau Promosi.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">3</div>
+        <h4>Masukkan kode, isi Tes Posisi</h4>
+        <p>Buka <span class="url">mai40.netlify.app</span>, masukkan kode dari email, isi Tes Posisi sekitar 3 menit. Hari 1 bisa langsung dimulai malam ini.</p>
+      </div>
+    </div>
+    <figure class="akses-shot">
+      <picture><source media="(min-width:800px)" srcset="img/masuk-kode-d.webp" width="1400" height="868"><img class="shot" data-zoom src="img/masuk-kode.webp" alt="Layar Kode Akses Pembeli Master AI 40+ dengan kolom Masukkan kode dan tombol Buka Aplikasi" width="728" height="1568" loading="lazy"></picture>
+      <figcaption>Cukup satu kode. Tanpa bikin akun, tanpa password.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow">
+      <h2 class="center" style="margin-bottom:26px;">Pertanyaan yang sering masuk</h2>
+      <div class="faq">
+        <details>
+          <summary>Ini aplikasi yang harus di-install dari Play Store?</summary>
+          <div class="ans">Tidak. Master AI 40+ dibuka lewat browser di HP, tablet, atau laptop. Supaya lebih cepat dibuka, kamu bisa menyimpannya ke layar utama HP seperti aplikasi biasa. Caranya ada di Panduan Akses.</div>
+        </details>
+        <details>
+          <summary>Gimana cara masuk setelah bayar?</summary>
+          <div class="ans">Setelah pembayaran terkonfirmasi, kamu diarahkan ke halaman sukses, dan Panduan Akses berisi kode masuk dikirim ke email kamu. Buka mai40.netlify.app, masukkan kodenya, lalu tap Buka Aplikasi.</div>
+        </details>
+        <details>
+          <summary>Perlu bikin akun atau password?</summary>
+          <div class="ans">Tidak. Cukup kode akses. Kalau ganti HP atau ganti browser, masukkan kode yang sama.</div>
+        </details>
+        <details>
+          <summary>Kodenya ditolak.</summary>
+          <div class="ans">Pastikan kamu membuka mai40.netlify.app, lalu ketik atau salin kode dari email apa adanya. Huruf besar kecil dan spasi yang ikut tersalin nggak masalah.</div>
+        </details>
+        <details>
+          <summary>HP Android biasa kuat?</summary>
+          <div class="ans">Kuat. Aplikasinya ringan, dan semua tool yang dilatih di 30 hari dipilih yang bisa jalan di HP kelas menengah. Ada 9 hari yang lebih nyaman di laptop, tapi tiap hari itu tetap punya cara untuk dikerjakan dari HP.</div>
+        </details>
+        <details>
+          <summary>Aku belum pernah pakai AI sama sekali. Bisa?</summary>
+          <div class="ans">Bisa. Hari 1 mulai dari membuat akun ChatGPT dan menulis permintaan pertama. Tiap langkah ada gambarnya, dan langkah yang sering bikin takut diberi label “Aman, tidak ada yang rusak”.</div>
+        </details>
+        <details>
+          <summary>Ini pakai AI apa? Harus bayar lagi?</summary>
+          <div class="ans">Aplikasi ini melatihmu memakai ChatGPT, Gemini, Canva, Perplexity, dan 18 tool lain yang semuanya punya versi gratis. Tidak ada AI di dalam aplikasi ini sendiri, jadi tidak ada biaya tambahan dari kami. Kalau suatu saat sebuah tool jadi berbayar, aplikasi memberi tahu dan menyiapkan pengganti gratisnya.</div>
+        </details>
+        <details>
+          <summary>Butuh waktu berapa lama sehari?</summary>
+          <div class="ans">Sekitar 15 menit: baca langkahnya 5 menit, kerjakan tugasnya 10 menit. Pilih satu jam yang tetap, misalnya setelah Subuh atau sebelum tidur.</div>
+        </details>
+        <details>
+          <summary>Kalau bolong beberapa hari, harus ulang dari nol?</summary>
+          <div class="ans">Tidak. Rute menunggu di hari terakhir yang kamu buka. Progres dan hasil yang sudah tersimpan nggak hilang.</div>
+        </details>
+        <details>
+          <summary>Bisa dipakai tanpa internet?</summary>
+          <div class="ans">Latihan, prompt, kamus, dan hasilmu tersimpan di HP. Tapi tool AI yang dilatih (ChatGPT, Gemini, dan lainnya) butuh internet untuk dipakai.</div>
+        </details>
+        <details>
+          <summary>Kalau ganti HP, datanya ikut?</summary>
+          <div class="ans">Bisa. Simpan cadangan dulu dari menu Pengaturan. Di HP baru, masuk dengan kode yang sama, lalu pulihkan dari file cadangan.</div>
+        </details>
+        <details>
+          <summary>Ada biaya bulanan?</summary>
+          <div class="ans">Tidak ada. Sekali bayar, semua fitur langsung terbuka, termasuk pembaruan tool ke depannya.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="sec-deep">
+  <div class="wrap">
+    <div class="narrow center">
+      <h2>Senin depan, rapat itu akan terjadi lagi. Ada yang nyebut AI, dan semua orang nengok ke yang paling muda.</h2>
+      <p class="lead" style="margin-top:20px;">Kali ini kamu bisa diam seperti biasa. Atau kamu bisa buka HP, tunjukkan rekap yang kamu bikin semalam, dan bilang: “Saya sudah coba. Hasilnya begini.”</p>
+      <p class="lead">Dua puluh tahun pengalamanmu nggak hilang ke mana-mana. Yang kurang selama ini cuma alatnya, dan cara belajar yang pelan.</p>
+      <p class="closing-line">Hari pertamamu cuma 15 menit.</p>
+      <div class="cta-block">
+        <a class="btn" href="checkout.html">Mulai Hari 1 → Rp127.000</a>
+        <p class="btn-note">Sekali bayar. Tanpa langganan. Buka dari browser HP atau laptop, tanpa install.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="logo">Master AI <em>40+</em></span>
+    <small>© 2026 Master AI 40+. Semua hak dilindungi.</small>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sp">
+    <b>Rp127.000</b>
+    <small>Sekali bayar, akses selamanya</small>
+  </div>
+  <a class="btn" href="checkout.html">Ambil Akses</a>
+</div>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan aplikasi diperbesar">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Tutup gambar">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="#1B2430" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lb-inner"><img id="lbImg" src="" alt=""></div>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('stickyCta');
+  var hero=document.querySelector('.hero');
+  if(!bar||!hero)return;
+  document.body.classList.add('has-sticky');
+  function check(){bar.classList.toggle('on',hero.getBoundingClientRect().bottom<0);}
+  check();
+  window.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('resize',check);
+})();
+(function(){
+  var track=document.querySelector('.testi-grid');
+  var dots=document.getElementById('testiDots');
+  if(!track||!dots)return;
+  var slides=track.querySelectorAll('figure');
+  var btns=dots.querySelectorAll('button');
+  function active(){
+    var mid=track.scrollLeft+track.clientWidth/2,best=0,min=Infinity;
+    for(var i=0;i<slides.length;i++){
+      var c=slides[i].offsetLeft+slides[i].offsetWidth/2,d=Math.abs(c-mid);
+      if(d<min){min=d;best=i;}
+    }
+    for(var j=0;j<btns.length;j++)btns[j].classList.toggle('on',j===best);
+  }
+  var t;
+  track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(active,60);},{passive:true});
+  for(var k=0;k<btns.length;k++){
+    btns[k].addEventListener('click',function(){
+      var el=slides[Number(this.getAttribute('data-i'))];
+      if(!el)return;
+      track.scrollTo({left:el.offsetLeft-(track.clientWidth-el.offsetWidth)/2,behavior:'smooth'});
+    });
+  }
+  active();
+})();
+(function(){
+  var lb=document.getElementById('lightbox'),img=document.getElementById('lbImg'),close=document.getElementById('lbClose');
+  var last=null;
+  function open(src,alt){
+    img.src=src;img.alt=alt||'';
+    lb.classList.add('on');document.body.style.overflow='hidden';close.focus();
+  }
+  function shut(){lb.classList.remove('on');img.src='';document.body.style.overflow='';if(last)last.focus();}
+  var zs=document.querySelectorAll('[data-zoom]');
+  for(var i=0;i<zs.length;i++){
+    zs[i].setAttribute('tabindex','0');
+    zs[i].setAttribute('role','button');
+    zs[i].addEventListener('click',function(){last=this;open(this.currentSrc||this.src,this.alt);});
+    zs[i].addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}});
+  }
+  close.addEventListener('click',shut);
+  lb.addEventListener('click',function(e){if(e.target===lb)shut();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))shut();});
+})();
+</script>
+</body>
+</html>
