@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Superhuman Protocol | Bukan Kurang Kopi, Tubuhmu Kelebihan Beban</title>
+<meta name="description" content="Reset tubuh berurutan 5 hari, dipandu jam per jam, tanpa puasa jus dan tanpa menambah kopi. Pantau kabut otak, energi jam 3 sore, dan tidur lewat grafik.">
+<meta property="og:title" content="Superhuman Protocol | Bukan Kurang Kopi, Tubuhmu Kelebihan Beban">
+<meta property="og:description" content="Reset tubuh berurutan 5 hari, dipandu jam per jam, tanpa puasa jus dan tanpa menambah kopi. Pantau kabut otak, energi jam 3 sore, dan tidur lewat grafik.">
+<meta name="theme-color" content="#013644">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='k' x1='10' y1='0' x2='54' y2='0' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2393B0B5'/%3E%3Cstop offset='.42' stop-color='%23B3C6C9'/%3E%3Cstop offset='.68' stop-color='%23F5A524'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230D3B45'/%3E%3Cpath d='M11 24C18 24 20 42 28 42S40 23 48 19' fill='none' stroke='url(%23k)' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='49' cy='18.5' r='6.5' fill='%23F5A524'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --pri:#F6FBFE;
+  --pri-deep:#021E25;
+  --pri-mid:#8EC9D2;
+  --pri-soft:rgba(245,165,36,.10);
+  --gold:#F5A524;
+  --gold-deep:#B8740A;
+  --gold-text:#F7BC5C;
+  --gold-soft:rgba(245,165,36,.12);
+  --gold-ink:#082830;
+  --sun:#FFE3AC;
+  --kabut:#B3C6C9;
+  --green:#5CC58A;
+  --green-soft:rgba(92,197,138,.14);
+  --red:#FF8A72;
+  --bg:#03303A;
+  --card:#073E4A;
+  --line:rgba(179,198,201,.17);
+  --line-soft:rgba(179,198,201,.10);
+  --ink:#E4EFF1;
+  --muted:#A9C0C4;
+  --muted-light:#7F9CA2;
+  --serif:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --radius:14px;
+  --radius-lg:20px;
+  --maxw:1120px;
+  --maxw-text:680px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;line-height:1.65;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;}
+h1,h2,h3,h4{margin:0;line-height:1.18;letter-spacing:-0.01em;color:var(--pri);}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-0.02em;}
+h1{font-size:clamp(30px,5.8vw,48px);}
+h2{font-size:clamp(25px,4.2vw,36px);}
+h3{font-size:clamp(21px,2.8vw,26px);}
+h4{font-size:17px;font-weight:700;font-family:var(--sans);}
+p{margin:0 0 1rem;}
+p:last-child{margin-bottom:0;}
+strong{font-weight:700;color:var(--pri);}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+.narrow{max-width:var(--maxw-text);margin-left:auto;margin-right:auto;}
+section{padding:56px 0;}
+@media(min-width:768px){section{padding:76px 0;}}
+.sec-alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-deep{background:var(--pri-deep);color:#fff;}
+.sec-deep h2,.sec-deep h3{color:#fff;}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--pri-mid);margin:0 0 10px;}
+.eyebrow-gold{color:var(--gold-text);}
+.lead{font-size:clamp(17px,2vw,19px);color:var(--muted);}
+.sec-deep .lead{color:#BCD0D3;}
+.center{text-align:center;}
+
+/* header */
+.site-head{background:var(--card);border-bottom:1px solid var(--line);padding:14px 0;position:relative;z-index:5;}
+.logo{font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:-0.01em;color:var(--pri);}
+.logo em{font-style:normal;color:var(--gold-deep);}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--gold);color:var(--gold-ink);text-decoration:none;
+  font-weight:800;font-size:17px;letter-spacing:-0.01em;
+  padding:17px 28px;border-radius:12px;border:none;cursor:pointer;
+  box-shadow:0 2px 0 var(--gold-deep);
+  transition:transform .12s ease,box-shadow .12s ease;
+  text-align:center;width:100%;
+}
+@media(min-width:560px){.btn{width:auto;font-size:18px;padding:18px 34px;}}
+.btn:hover{transform:translateY(-1px);box-shadow:0 3px 0 var(--gold-deep);}
+.btn:active{transform:translateY(1px);box-shadow:0 1px 0 var(--gold-deep);}
+.btn:focus-visible{outline:3px solid var(--pri);outline-offset:3px;}
+.sec-deep .btn:focus-visible{outline-color:#fff;}
+.btn-note{font-size:14.5px;color:var(--muted);margin-top:12px;}
+.sec-deep .btn-note{color:#A9C2C6;}
+.cta-block{margin-top:26px;}
+
+/* hero */
+.hero{background:var(--card);padding:28px 0 44px;border-bottom:1px solid var(--line);}
+.hero-grid{display:block;}
+.hero-img{margin:22px -20px 24px;}
+@media(min-width:900px){
+  .hero{padding:64px 0 72px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1fr 460px;
+    grid-template-areas:"hd img" "rest img";
+    column-gap:56px;align-items:center;
+  }
+  .hero-hd{grid-area:hd;align-self:end;}
+  .hero-rest{grid-area:rest;align-self:start;padding-top:18px;}
+  .hero-img{grid-area:img;margin:0;align-self:center;}
+  .hero-img img{border-radius:var(--radius-lg);}
+}
+.hero-bullets{list-style:none;padding:0;margin:22px 0 0;}
+.hero-bullets li{position:relative;padding-left:30px;margin-bottom:12px;font-size:16.5px;color:var(--ink);}
+.hero-bullets li::before{
+  content:"";position:absolute;left:0;top:9px;width:16px;height:16px;border-radius:50%;
+  background:var(--green-soft);border:2px solid var(--green);
+}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;font-size:14.5px;color:var(--muted);font-weight:600;}
+.hero-facts span{white-space:nowrap;}
+
+/* cards */
+.grid{display:grid;gap:18px;}
+@media(min-width:760px){.grid-3{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr);}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+.sec-alt .card{background:var(--bg);}
+.card-quote{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--pri);margin:0 0 10px;line-height:1.3;}
+.card p{font-size:16px;color:var(--muted);}
+
+/* pilar metode */
+.pilar{border-left:4px solid var(--pri-mid);padding:4px 0 4px 18px;margin-bottom:20px;}
+.pilar:nth-child(2){border-color:var(--gold);}
+.pilar:nth-child(3){border-color:var(--green);}
+.pilar:nth-child(4){border-color:var(--pri-deep);}
+.pilar h4{margin-bottom:4px;color:var(--pri);}
+.pilar p{font-size:16px;color:var(--muted);margin:0;}
+.golden{margin-top:28px;font-family:var(--serif);font-size:26px;font-weight:700;color:var(--pri);margin-bottom:4px;line-height:1.25;}
+
+/* steps */
+.step{display:grid;gap:20px;padding:28px 0;border-top:1px solid var(--line);}
+.step:first-of-type,.narrow + .step{border-top:none;}
+@media(min-width:800px){
+  .step{grid-template-columns:1fr 300px;gap:56px;align-items:center;}
+  .step.dimg{grid-template-columns:1fr 1.35fr;gap:48px;}
+  .step-img{order:2;}
+}
+.step-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;
+  background:var(--pri);color:#fff;font-weight:800;font-size:16px;margin-bottom:12px;
+}
+.step-copy p{color:var(--muted);margin-top:10px;}
+.step-wide{display:block;}
+.step-wide .step-copy{max-width:var(--maxw-text);}
+
+/* screenshot frames */
+.shot{border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:0 1px 3px rgba(13,59,69,.07);}
+.shot-r{max-width:300px;width:100%;margin-left:auto;margin-right:auto;}
+@media(min-width:800px){.step .shot-r{max-width:100%;}}
+@media(min-width:860px){.feat .shot-r{max-width:100%;}}
+.akses-shot .shot{max-width:320px;width:100%;margin:0 auto;}
+@media(min-width:800px){.akses-shot .shot{max-width:760px;}}
+[data-zoom]{cursor:zoom-in;}
+.m-only{display:inline;}
+@media(min-width:700px){.m-only{display:none;}}
+figure{margin:0;}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center;}
+
+/* feature rows */
+.feat{display:grid;gap:24px;padding:40px 0;border-top:1px solid var(--line);}
+@media(min-width:860px){
+  .feat{grid-template-columns:1fr 320px;gap:64px;align-items:center;}
+  .feat-img{order:2;}
+  .feat.flip{grid-template-columns:320px 1fr;}
+  .feat.flip .feat-img{order:1;}
+  .feat.flip .feat-copy{order:2;}
+  .feat.dimg{grid-template-columns:1fr 1.35fr;gap:48px;}
+  .feat.dimg.flip{grid-template-columns:1.35fr 1fr;}
+}
+.feat-copy h3{margin-bottom:12px;}
+.feat-copy p{color:var(--muted);font-size:16.5px;}
+
+/* jelas dari awal */
+.clear-card h3{margin-bottom:10px;}
+.clear-card p{color:var(--muted);font-size:16.5px;}
+.clear-yes{border-top:4px solid var(--green);}
+.clear-no{border-top:4px solid var(--gold-deep);}
+
+/* fit lists */
+.fitlist{list-style:none;padding:0;margin:0;}
+.fitlist li{position:relative;padding-left:30px;margin-bottom:13px;font-size:16.5px;}
+.fitlist li::before{position:absolute;left:0;top:0;font-weight:800;font-size:17px;}
+.fit-yes li::before{content:"✓";color:var(--green);}
+.fit-no li::before{content:"✕";color:var(--red);}
+
+/* table */
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;border:1px solid var(--line);border-radius:var(--radius);}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15.5px;background:var(--card);}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
+thead th{font-size:13px;font-weight:700;color:var(--muted);border-bottom:2px solid var(--line);}
+thead th.hl{color:var(--pri);}
+tbody td.hl{font-weight:700;color:var(--pri);background:var(--pri-soft);}
+tbody th{font-weight:600;color:var(--ink);width:24%;}
+
+/* testimoni */
+.testi-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px 20px 6px;margin:0 -20px;}
+.testi-grid::-webkit-scrollbar{display:none;}
+.testi-grid img{flex:0 0 78%;scroll-snap-align:center;}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:16px;}
+.testi-dots button{width:8px;height:8px;padding:0;border:none;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s ease,width .2s ease;}
+.testi-dots button.on{background:var(--pri);width:22px;border-radius:5px;}
+.testi-dots button:focus-visible{outline:2px solid var(--pri);outline-offset:3px;}
+@media(min-width:700px){
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;overflow:visible;padding:0;margin:0;}
+  .testi-grid img{flex:none;}
+  .testi-dots{display:none;}
+}
+.testi-grid img{width:100%;height:auto;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:0 1px 3px rgba(13,59,69,.07);}
+
+/* price */
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 22px;max-width:620px;margin:0 auto;}
+@media(min-width:640px){.price-card{padding:36px;}}
+.price-card h3{font-size:clamp(21px,2.6vw,24px);}
+.val-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:15.5px;}
+.val-row span:last-child{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.val-total{display:flex;justify-content:space-between;gap:16px;padding:16px 0 0;font-weight:700;color:var(--pri);}
+.val-total s{color:var(--muted-light);font-weight:600;}
+.price-now{text-align:center;background:var(--gold-soft);border-radius:var(--radius);padding:22px;margin:24px 0 0;}
+.price-now .amt{font-size:clamp(36px,8vw,50px);font-weight:800;color:var(--pri);letter-spacing:-0.04em;line-height:1.1;}
+.price-now .sub{font-size:15px;color:var(--muted);margin-top:4px;}
+.price-divider{font-size:16px;color:var(--muted);text-align:center;margin-top:18px;padding-top:18px;border-top:1px solid var(--line-soft);}
+.price-divider b{display:block;color:var(--pri);margin-bottom:4px;}
+
+/* akses */
+.akses .card{text-align:left;}
+.akses .card p{margin-top:8px;}
+.akses-foot{text-align:center;font-weight:700;color:var(--pri);margin-top:24px;}
+.akses-shot{margin-top:30px;}
+.url{font-weight:700;color:var(--pri);white-space:nowrap;}
+
+/* faq */
+.faq{border-top:1px solid var(--line);}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;padding:18px 34px 18px 0;position:relative;font-weight:700;font-size:16.5px;color:var(--pri);list-style:none;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"";position:absolute;right:6px;top:26px;width:9px;height:9px;
+  border-right:2.5px solid var(--pri-mid);border-bottom:2.5px solid var(--pri-mid);
+  transform:rotate(45deg);transition:transform .18s ease;
+}
+.faq details[open] summary::after{transform:rotate(-135deg);top:28px;}
+.faq summary:focus-visible{outline:2px solid var(--pri);outline-offset:2px;}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:16.5px;}
+
+/* closing */
+.closing-line{font-family:var(--serif);font-size:25px;font-weight:700;color:#fff;margin-top:24px;line-height:1.3;}
+
+/* sticky bar */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;
+  background:var(--card);border-top:1px solid var(--line);padding:10px 16px;
+  box-shadow:0 -3px 14px rgba(13,59,69,.10);
+  display:flex;align-items:center;gap:12px;
+  transform:translateY(110%);transition:transform .25s ease;
+}
+.sticky-cta.on{transform:translateY(0);}
+.sticky-cta .sp{flex:1;min-width:0;}
+.sticky-cta .sp b{display:block;font-size:17px;color:var(--pri);line-height:1.2;}
+.sticky-cta .sp small{font-size:12.5px;color:var(--muted);}
+.sticky-cta .btn{width:auto;padding:14px 20px;font-size:15.5px;flex-shrink:0;}
+@media(min-width:900px){.sticky-cta{display:none;}}
+body.has-sticky{padding-bottom:82px;}
+@media(min-width:900px){body.has-sticky{padding-bottom:0;}}
+
+/* footer */
+.site-foot{background:var(--card);border-top:1px solid var(--line);padding:30px 0;text-align:center;}
+.site-foot .logo{display:block;margin-bottom:6px;}
+.site-foot small{font-size:13.5px;color:var(--muted-light);}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,40,48,.92);display:none;align-items:center;justify-content:center;padding:56px 12px 20px;}
+.lb.on{display:flex;}
+.lb-inner{max-width:1100px;width:100%;max-height:100%;overflow:auto;-webkit-overflow-scrolling:touch;border-radius:10px;}
+.lb img{width:auto;max-width:100%;max-height:84vh;margin:0 auto;border-radius:10px;}
+.lb-close{
+  position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;
+  background:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+}
+.lb-close:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+.lb-close svg{width:18px;height:18px;}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+
+/* tambahan Superhuman Protocol */
+.hero-kicker{font-size:15px;font-weight:600;color:var(--pri-mid);margin:0 0 12px;line-height:1.45;}
+.hero-price{display:flex;align-items:baseline;gap:12px;margin-top:24px;}
+.hero-price s{font-size:17px;color:var(--muted-light);font-weight:600;}
+.hero-price b{font-family:var(--serif);font-size:30px;font-weight:800;color:var(--pri);letter-spacing:-0.03em;}
+.hero-price + .cta-block{margin-top:12px;}
+.pilar h4 span{color:var(--muted-light);font-weight:600;}
+.aman-card{margin-top:18px;border-left:4px solid var(--pri-mid);}
+.aman-card h3{margin-bottom:10px;}
+.aman-card p{color:var(--muted);font-size:16.5px;}
+.data-note{text-align:center;font-size:15px;color:var(--muted);margin-top:20px;}
+.feat-list{list-style:none;padding:0;margin:14px 0 0;}
+.feat-list li{position:relative;padding-left:22px;margin-bottom:12px;font-size:16px;color:var(--muted);}
+.feat-list li::before{content:"";position:absolute;left:2px;top:10px;width:8px;height:8px;border-radius:2px;background:var(--gold);}
+.feat-list li b{color:var(--pri);}
+.feat-solo .feat-copy{max-width:var(--maxw-text);}
+@media(min-width:860px){.feat.feat-solo{grid-template-columns:1fr;}}
+.price-lead{max-width:var(--maxw-text);margin:12px auto 0;}
+.sticky-cta .sp b s{font-size:13px;color:var(--muted-light);font-weight:600;margin-right:6px;}
+
+/* ===== versi mockup: teal gelap + cahaya sunset ===== */
+body{background:var(--bg);}
+::selection{background:rgba(245,165,36,.35);color:#fff;}
+.site-head{background:#013644;border-bottom:1px solid var(--line-soft);}
+.logo em{color:var(--gold);}
+.hero{
+  position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft);
+  background:
+    radial-gradient(60% 55% at 92% 0%,rgba(245,158,52,.34),rgba(245,158,52,0) 70%),
+    radial-gradient(40% 40% at 100% 38%,rgba(255,227,172,.14),rgba(255,227,172,0) 70%),
+    linear-gradient(180deg,#013644 0%,#03303A 100%);
+}
+.hero h1{color:#fff;}
+@media(min-width:900px){h1{font-size:clamp(44px,4.6vw,58px);letter-spacing:-0.03em;line-height:1.06;}}
+.hero-kicker{color:var(--sun);}
+.hero .lead{color:#C4D6D9;}
+.hero-img img{box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,227,172,.14);border-radius:var(--radius-lg);}
+.hero-price b{color:#fff;}
+.hero-facts{color:var(--sun);}
+.sec-alt{background:#073E4A;border-color:var(--line-soft);}
+.card{background:#073E4A;}
+.sec-alt .card{background:#04333E;}
+.card-quote{color:var(--sun);}
+.step-num{background:var(--gold);color:var(--gold-ink);}
+.golden{color:var(--gold);}
+.pilar{border-color:var(--pri-mid);}
+.pilar:nth-child(2){border-color:var(--gold);}
+.pilar:nth-child(3){border-color:var(--green);}
+.pilar:nth-child(4){border-color:var(--sun);}
+.shot{background:#fff;border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 44px rgba(0,0,0,.38);}
+.testi-grid img{border:1px solid rgba(255,255,255,.12);box-shadow:0 14px 34px rgba(0,0,0,.35);}
+.testi-dots button{background:rgba(179,198,201,.3);}
+.testi-dots button.on{background:var(--gold);}
+.clear-no{border-top-color:var(--gold);}
+.aman-card{border-left-color:var(--sun);}
+table{background:#073E4A;}
+.tbl-scroll{border-color:var(--line);}
+thead th.hl{color:var(--gold);}
+tbody td.hl{color:#fff;}
+.price-card{background:#073E4A;border-color:rgba(255,227,172,.18);box-shadow:0 24px 60px rgba(0,0,0,.3);}
+.price-now{border:1px solid rgba(245,165,36,.35);}
+.price-now .amt{color:var(--gold);}
+.url{color:var(--sun);}
+.faq summary{color:#fff;}
+.faq summary::after{border-color:var(--gold);}
+.sec-deep{
+  background:
+    radial-gradient(70% 60% at 50% 115%,rgba(245,158,52,.30),rgba(245,158,52,0) 70%),
+    #021E25;
+}
+.closing-line{color:var(--sun);}
+.site-foot{background:#021E25;border-top-color:var(--line-soft);}
+.sticky-cta{background:#04333E;border-top-color:var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.35);}
+.sticky-cta .sp b{color:#fff;}
+.btn{box-shadow:0 2px 0 var(--gold-deep),0 10px 28px rgba(245,158,52,.25);}
+.btn:hover{box-shadow:0 3px 0 var(--gold-deep),0 14px 34px rgba(245,158,52,.32);}
+.btn:focus-visible{outline-color:#fff;}
+.data-note{color:var(--muted-light);}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <div class="logo">Superhuman <em>Protocol</em></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-hd">
+        <p class="hero-kicker">Untuk pengusaha, kreator, dan siapa pun yang penghasilannya bergantung pada otaknya sendiri</p>
+        <h1>Bukan kurang kopi. Tubuhmu kelebihan beban.</h1>
+      </div>
+      <div class="hero-img">
+        <img src="img/hero-mockup.webp" alt="Superhuman Protocol, reset tubuh 5 hari dipandu jam per jam" width="980" height="1232" fetchpriority="high">
+      </div>
+      <div class="hero-rest">
+        <p class="lead">Superhuman Protocol memandu reset tubuh berurutan 5 hari, jam per jam dari bangun sampai tidur, sambil kamu tetap meeting, live, dan closing. Tanpa puasa jus, tanpa menambah kopi, tanpa beli suplemen. Di Hari 5, kamu lihat sendiri di grafik apakah kabut otak sore, energi, dan tidurmu bergerak.</p>
+        <ul class="hero-bullets">
+          <li>Ngeblank jam 3 sore padahal udah ngopi? Protokol Jam 3 Sore muncul tepat di jam rawanmu. Sepuluh menit, ada timernya.</li>
+          <li>Jadwal padat, takut gak kepegang? Masukkan jam meeting atau live-mu, linimasa hari itu langsung digeser sendiri.</li>
+          <li>Gak yakin ada yang berubah? Check-in singkat pagi, siang, dan sore. Di Hari 5 rapornya keluar, angka awal lawan angka akhir.</li>
+        </ul>
+        <div class="hero-price"><s>Rp497.000</s><b>Rp127.000</b></div>
+        <div class="cta-block">
+          <a class="btn" href="checkout.html">Mulai Reset 5 Hari → Rp127.000</a>
+          <p class="btn-note">Sekali bayar. Akses selamanya. Buka dari browser HP atau laptop, gak perlu download dari Play Store.</p>
+        </div>
+        <div class="hero-facts">
+          <span>5 hari, dipandu jam per jam</span>
+          <span>Tiap langkah maksimal 10 menit</span>
+          <span>Bisa diulang tiap bulan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:34px;">
+      <h2>Baca tiga ini. Kalau ada satu yang kejadian minggu ini, kamu di tempat yang benar.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <p class="card-quote">“Bentar ya, aku cek dulu angkanya.”</p>
+        <p>Jam 3 sore, closing lewat Zoom dengan calon klien terbesar bulan ini. Dia nanya satu angka yang biasanya kamu hafal di luar kepala. Kepalamu kosong. Padahal kopi kedua baru habis setengah jam yang lalu.</p>
+      </div>
+      <div class="card">
+        <p class="card-quote">“Padahal tidurnya 7 jam.”</p>
+        <p>Alarm bunyi, kamu snooze tiga kali. Bangun rasanya kayak abis dipukulin. Kamu buka HP, lihat 40 chat customer yang belum dibalas, dan diam-diam mulai mikir, jangan-jangan ada apa-apa sama badanku.</p>
+      </div>
+      <div class="card">
+        <p class="card-quote">“Oke, besok mulai jus detoks.”</p>
+        <p>Botol pertama dan kedua lancar. Jam 2 siang kepala nyut-nyutan, badan lemes, dan kamu ada jadwal live jam 7 malam. Jam 4 kamu sudah pesan kopi susu gula aren. Hari pertama, selesai.</p>
+      </div>
+    </div>
+    <p class="narrow lead center" style="margin-top:30px;">Tiga adegan ini kelihatan beda. Akarnya satu. Dan bukan karena kamu kurang disiplin, kurang tidur, atau kurang kopi.</p>
+  </div>
+</section>
+
+<!-- REFRAME -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Otakmu gak kurang bahan bakar. Tubuhmu kelebihan beban, dan bersih-bersihnya selama ini gak berurutan.</h2>
+      <p style="margin-top:18px;">Coba hitung bebanmu seminggu ini. Makan di luar hampir tiap hari. Tidur 5 sampai 6 jam karena balas chat sampai lewat tengah malam. Kopi jadi penyangga dari pagi sampai sore. Air galon yang entah sudah berapa tahun dipakai ulang. Gak pernah ada satu hari pun jeda untuk bersih-bersih.</p>
+      <p>Tubuhmu sebenarnya sudah punya sistem bersih-bersih sendiri: usus, hati, dan tidur. Masalahnya, sistem itu kerja lembur tanpa bahan dan tanpa urutan. Kopi cuma menunda rasa capeknya, bukan membereskannya.</p>
+      <p>Itu juga kenapa jus detoks bikin lemas. Dia lompat langsung ke tahap bersih-bersih tanpa fondasi, sambil memotong makanan yang justru dibutuhkan otak untuk tetap kerja. Wajar kalau banyak yang menyerah sebelum sore di hari pertama.</p>
+      <p>Superhuman Protocol membalik urutannya. Isi dulu bahannya, baru bersih-bersih, satu bagian per hari.</p>
+
+      <div style="margin-top:32px;">
+        <div class="pilar"><h4>Fondasi nutrisi <span>· Hari 1</span></h4><p>Protein di setiap makan, sayur hijau, ikan atau sumber pengganti, garam beryodium. Kopi mulai dikurangi bertahap, bukan distop mendadak.</p></div>
+        <div class="pilar"><h4>Usus <span>· Hari 2 dan 3</span></h4><p>Serat dan air yang cukup, jeda makan yang dijaga, tanpa puasa, tanpa pencahar.</p></div>
+        <div class="pilar"><h4>Parasit <span>· Hari 4</span></h4><p>Obat cacing bebas sesuai label kemasan, makanan matang, ganti sprei dan handuk. Kalau kamu di Jalur Aman, langkahnya diganti versi ringan tanpa obat.</p></div>
+        <div class="pilar"><h4>Hati dan tidur <span>· Hari 5</span></h4><p>Hari tanpa gorengan dan gula tambahan, menu dari bahan dapur biasa, jam kopi terakhir yang dimajukan, lalu ritual tutup hari.</p></div>
+      </div>
+
+      <p class="golden">Fondasi dulu, baru bersih-bersih.</p>
+      <p style="color:var(--muted);">Urutan yang dijaga programnya setiap hari, supaya kamu tetap bisa kerja selama 5 hari itu, bukan tumbang di tengah jalan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARA KERJA -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:10px;">
+      <h2>Kamu gak perlu nyusun jadwal. Programnya yang nyusun.</h2>
+    </div>
+
+    <div class="step dimg">
+      <div class="step-copy">
+        <div class="step-num">1</div>
+        <h3>Cek Beban Tubuh, sekitar 3 menit</h3>
+        <p>19 pertanyaan singkat: jam tidur dan bangun, berapa gelas kopi, jam berapa biasanya ngeblank, seberapa sering makan di luar, sampai kebiasaan di rumah.</p>
+        <p>Keluar Peta Beban: skor beban tubuhmu, 3 sumber beban terbesar, kurva energi per jam, dan jalur yang aman untukmu.</p>
+      </div>
+      <div class="step-img">
+        <picture><source media="(min-width:800px)" srcset="img/peta-beban-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/peta-beban.webp" alt="Layar Peta Beban berisi skor beban tubuh 55 dari 100 dan 3 sumber beban terbesar" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="step step-wide">
+      <div class="step-copy">
+        <div class="step-num">2</div>
+        <h3>Hari 0, persiapan semalam</h3>
+        <p>Rencana turun kopi bertahap supaya gak sakit kepala, dan daftar belanja dari pasar atau minimarket yang bisa langsung kamu kirim ke WhatsApp pasangan atau asisten.</p>
+      </div>
+    </div>
+
+    <div class="step dimg">
+      <div class="step-copy">
+        <div class="step-num">3</div>
+        <h3>Tiap hari, buka halaman Hari Ini</h3>
+        <p>Langkah yang harus kamu kerjakan sekarang sudah ada di layar pertama, lengkap dengan jamnya. Kerjakan, tekan Selesai, lanjut kerja.</p>
+      </div>
+      <div class="step-img">
+        <picture><source media="(min-width:800px)" srcset="img/hari-ini-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/hari-ini.webp" alt="Halaman Hari Ini dengan kartu Langkah Sekarang jam 07.00: sarapan telur rebus, tumis bayam, nasi setengah piring" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="cta-block narrow center" style="margin-top:34px;">
+      <a class="btn" href="checkout.html">Mulai Reset 5 Hari → Rp127.000</a>
+    </div>
+  </div>
+</section>
+
+<!-- FITUR -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center">
+      <h2>Yang kamu pakai setiap hari</h2>
+    </div>
+
+    <div class="feat feat-solo" style="border-top:none;">
+      <div class="feat-copy">
+        <p class="eyebrow">Hari Ini</p>
+        <h3>Jam 07.00. Kamu buka HP, dan program sudah tahu kamu harus ngapain.</h3>
+        <p style="margin-top:12px;">Seluruh hari disusun dari jam bangunmu sendiri: kapan minum, kapan makan, kapan gerak, kapan jeda layar, sampai jam kopi terakhir. Di atasnya selalu ada satu kartu Langkah Sekarang. Isinya jelas, misalnya “Telur rebus 2 butir, tumis bayam, nasi setengah piring.” Kerjakan, tekan Selesai, kartu berikutnya muncul di jamnya.</p>
+        <p>Gak suka menunya? Tekan Ganti Menu. Bangun lebih siang dari biasanya? Linimasanya ikut bergeser.</p>
+      </div>
+    </div>
+
+    <div class="feat dimg">
+      <div class="feat-copy">
+        <p class="eyebrow eyebrow-gold">Protokol Jam 3 Sore</p>
+        <h3>14.45. Biasanya ini jam kamu pesan kopi ketiga.</h3>
+        <p style="margin-top:12px;">Hari ini yang muncul kartu Protokol Jam 3 Sore: dua gelas air hangat, jalan 10 menit, lalu camilan tanpa gula. Tekan Mulai Timer, timernya jalan sendiri.</p>
+        <p>Sebelum mulai, kamu menilai energimu. Setelah selesai, kamu menilai lagi. Dua angka itu tersimpan, dan di Hari 5 kamu lihat sendiri polanya. Protokol ini bisa dipakai mulai hari pertama, bahkan sebelum reset-nya jalan jauh.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/jam3-sore-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/jam3-sore.webp" alt="Kartu Protokol Jam 3 Sore jam 14.45 dengan tombol Mulai timer 10 menit" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat flip dimg">
+      <div class="feat-copy">
+        <p class="eyebrow">Hari yang gak ideal</p>
+        <h3>Program lain menganggap harimu kosong. Yang ini tahu kamu punya klien.</h3>
+        <ul class="feat-list">
+          <li><b>Agenda Anti-Tabrakan.</b> Ada meeting jam 2, live jam 7, atau closing? Masukkan jam dan durasinya. Langkah yang bertabrakan otomatis digeser ke sebelum atau sesudahnya.</li>
+          <li><b>Hari Padat.</b> Satu ketukan, layarmu cuma menampilkan langkah wajib: air, makan, dan Protokol Jam 3 Sore.</li>
+          <li><b>Makan di Luar.</b> Lagi di warteg, nasi padang, warung tenda, fast food, atau cuma sempat mampir minimarket? Program kasih tahu apa yang diambil dan apa yang dilewati.</li>
+          <li><b>Ada Keluhan?</b> Kepala nyut-nyutan di hari kedua karena kopinya dikurangi? Buka tombol ini, kamu langsung tahu mana yang wajar dan mana yang tanda harus berhenti.</li>
+          <li><b>Hari Ini Kacau.</b> Seharian berantakan total? Tekan satu tombol, hari itu diulang besok pagi. Kemajuanmu tetap tersimpan, gak ada yang hangus, gak perlu mulai dari nol.</li>
+        </ul>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/agenda-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/agenda.webp" alt="Lembar Agenda Hari 3 dengan meeting 14.00 sampai 15.30 dan pilihan Meeting, Live, Closing" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat dimg">
+      <div class="feat-copy">
+        <p class="eyebrow">Grafik dan Rapor</p>
+        <h3>Bukan katanya. Kelihatan.</h3>
+        <p style="margin-top:12px;">Tiap check-in singkat masuk ke grafik: kabut otak, energi jam 3 sore, dan kualitas tidur. Di Hari 5, Rapor-mu keluar, membandingkan angka awal dari Cek Beban dengan angka di hari-hari terakhir.</p>
+        <p>Kamu juga dapat Peta Jam Emas: jam otakmu paling tajam untuk keputusan besar dan pekerjaan paling sulit, gelombang kedua untuk meeting atau live, dan jam rawan untuk tugas yang gak butuh mikir berat.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/rapor-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/rapor.webp" alt="Rapor 5 hari dengan 3 penanda kunci: kabut otak turun dari 7 ke 3,5 dan energi jam 3 sore naik dari 4 ke 6,5" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat feat-solo">
+      <div class="feat-copy">
+        <p class="eyebrow eyebrow-gold">Setelah Hari 5</p>
+        <h3>Lima hari selesai. Programnya enggak.</h3>
+        <p style="margin-top:12px;">Lanjutkan dengan Pemeliharaan 30 Hari supaya hasilnya gak balik lagi. Lalu setelah periode gila-gilaan, launching, lebaran, perjalanan dinas, begadang seminggu, tekan Reset Ulang: penuh 5 hari, atau Reset Kilat 3 hari kalau waktunya mepet.</p>
+        <p>Riwayat tiap reset tersimpan, jadi kamu bisa bandingkan dari bulan ke bulan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPAYA JELAS -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Supaya jelas dari awal</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card clear-card clear-yes">
+        <h3>Superhuman Protocol bisa</h3>
+        <p>menyusun reset tubuh 5 hari jam per jam dari jam bangunmu, menggeser jadwal saat harimu padat, memberi tahu mana keluhan yang wajar, dan menunjukkan di grafik apakah kabut otak, energi, dan tidurmu bergerak.</p>
+      </div>
+      <div class="card clear-card clear-no">
+        <h3>Superhuman Protocol bukan</h3>
+        <p>dokter, dan bukan pengganti pemeriksaan. Program ini tidak mendiagnosis, tidak menjual suplemen atau ramuan, tidak memakai enema atau pencahar, dan tidak menjanjikan berat badan turun. Kalau ada keluhan yang perlu diperiksa, program menyuruhmu berhenti dan ke dokter, bukan memaksa lanjut.</p>
+      </div>
+    </div>
+    <div class="card aman-card">
+      <h3>Ada kondisi khusus? Programnya menyesuaikan.</h3>
+      <p>Saat Cek Beban, kamu ditanya beberapa hal: sedang hamil atau menyusui, punya penyakit yang sedang ditangani dokter, atau minum obat resep setiap hari. Kalau ada yang kamu tandai, program otomatis memakai Jalur Aman: perubahan makan dibuat bertahap, dan langkah obat cacing di Hari 4 diganti versi ringan tanpa obat. Sebelum mengubah pola makan, tetap bicarakan dulu dengan dokter yang biasa menanganimu.</p>
+    </div>
+    <p class="data-note">Data kesehatanmu tersimpan di HP-mu sendiri. Tanpa akun, tanpa dikirim ke mana-mana.</p>
+  </div>
+</section>
+
+<!-- UNTUK SIAPA -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 style="margin-bottom:16px;">Cocok kalau</h3>
+        <ul class="fitlist fit-yes">
+          <li>Penghasilanmu bergantung pada otakmu sendiri: pemilik usaha, live seller, kreator, konsultan, atau freelancer.</li>
+          <li>Tiap sore jam 2 sampai 4 kamu mulai lemot, dan kopi sudah gak mempan seperti dulu.</li>
+          <li>Tidurmu sebenarnya cukup, tapi bangun tetap capek.</li>
+          <li>Kamu pernah coba jus detoks atau suplemen fokus, dan hasilnya cuma sebentar atau malah bikin lemas.</li>
+          <li>Kamu butuh cara yang tetap jalan di sela meeting, live, dan makan di luar.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:16px;">Bukan untuk kamu kalau</h3>
+        <ul class="fitlist fit-no">
+          <li>Kamu cari cara cepat menurunkan berat badan. Program ini gak dirancang untuk itu.</li>
+          <li>Kamu sedang mencari obat untuk penyakit tertentu. Itu ranah dokter.</li>
+          <li>Kamu berharap hasil tanpa menjalankan langkahnya selama 5 hari.</li>
+          <li>Kamu cari program puasa jus atau detoks ekstrem. Di sini kamu tetap makan tiga kali sehari.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERBANDINGAN -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Kenapa program, bukan jus detoks atau suplemen fokus.</h2>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Jus detoks 1 sampai 3 hari</th>
+            <th>Suplemen atau kopi fokus</th>
+            <th class="hl">Superhuman Protocol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th>Tetap makan dan kerja</th><td>Makan diganti botol, sering lemas</td><td>Bisa</td><td class="hl">Makan tiga kali, dijadwal sesuai jam kerjamu</td></tr>
+          <tr><th>Yang dibenahi</th><td>Langsung bersih-bersih, tanpa fondasi</td><td>Rasa capeknya ditambal</td><td class="hl">Urutannya: fondasi dulu, baru bersih-bersih</td></tr>
+          <tr><th>Jadwal harian</th><td>Ikut jadwal kirim botol</td><td>Tidak ada</td><td class="hl">Jam per jam, ikut jam bangunmu</td></tr>
+          <tr><th>Saat hari padat atau berantakan</th><td>Gagal, mulai dari nol</td><td>Tidak berpengaruh</td><td class="hl">Hari Padat, Agenda, atau diulang besok</td></tr>
+          <tr><th>Tahu ada yang berubah</th><td>Pakai perasaan</td><td>Pakai perasaan</td><td class="hl">Grafik dan Rapor 5 Hari</td></tr>
+          <tr><th>Biaya tiap dipakai</th><td>Beli lagi tiap paket</td><td>Beli lagi tiap botol habis</td><td class="hl">Sekali bayar, bisa diulang tiap bulan</td></tr>
+          <tr><th>Rambu keamanan</th><td>Jarang ada</td><td>Tergantung label</td><td class="hl">Cek Beban, Jalur Aman, dan tanda kapan berhenti</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Cerita dari yang sudah menjalani 5 harinya.</h2>
+      <p class="lead" style="margin-top:12px;"><span class="m-only">Geser untuk melihat cerita lainnya. </span>Nomor disensor untuk menjaga privasi.</p>
+    </div>
+    <div class="testi-grid">
+      <img src="img/testi1.webp" alt="Screenshot WhatsApp: pemilik bengkel hampir berhenti di hari 2, tapi tombol keluhan bikin dia tahu sakit kepalanya wajar, dan sore harinya masih segar" width="392" height="784" loading="lazy">
+      <img src="img/testi2.webp" alt="Screenshot WhatsApp: editor video, energi bangun naik dari 3 ke 7, kopi terakhir sekarang jam 4 sore, revisi klien berkurang" width="392" height="784" loading="lazy">
+      <img src="img/testi3.webp" alt="Screenshot WhatsApp: pengguna menyelesaikan 5 hari meski 2 harinya dinas, memakai tombol kacau dan Hari Padat" width="392" height="784" loading="lazy">
+    </div>
+    <div class="testi-dots" id="testiDots" aria-hidden="true">
+      <button type="button" class="on" data-i="0" aria-label="Testimoni 1"></button>
+      <button type="button" data-i="1" aria-label="Testimoni 2"></button>
+      <button type="button" data-i="2" aria-label="Testimoni 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- HARGA -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Lebih murah dari setengah paket jus detoks sehari. Dan bisa kamu pakai lagi bulan depan.</h2>
+      <p class="lead price-lead">Satu paket jus detoks untuk sehari harganya Rp300 ribuan. Sebotol suplemen fokus Rp400 ribuan, dan habis dalam sebulan. Superhuman Protocol sekali bayar, lalu bisa kamu ulang setiap kali badanmu mulai drop lagi.</p>
+    </div>
+    <div class="price-card">
+      <h3 class="center" style="margin-bottom:20px;">Yang kamu dapat begitu masuk</h3>
+      <div class="val-row"><span>Cek Beban Tubuh dan Peta Beban: skor, 3 sumber beban terbesar, kurva energi, jalurmu</span><span>Rp65.000</span></div>
+      <div class="val-row"><span>Protokol Reset 5 Hari jam per jam, linimasa ikut jam bangunmu</span><span>Rp97.000</span></div>
+      <div class="val-row"><span>Hari 0 Persiapan: rencana turun kopi bertahap dan daftar belanja pasar atau minimarket</span><span>Rp30.000</span></div>
+      <div class="val-row"><span>Protokol Jam 3 Sore bertimer, dengan skor energi sebelum dan sesudah</span><span>Rp50.000</span></div>
+      <div class="val-row"><span>Agenda Anti-Tabrakan, Hari Padat, Makan di Luar, Ganti Menu, Hari Ini Kacau</span><span>Rp60.000</span></div>
+      <div class="val-row"><span>Panduan Ini Normal, Kapan Berhenti, dan Jalur Aman</span><span>Rp35.000</span></div>
+      <div class="val-row"><span>Grafik harian, Peta Jam Emas, dan Rapor 5 Hari</span><span>Rp50.000</span></div>
+      <div class="val-row"><span>Audit Rumah: galon, wajan, minyak, kosmetik, botol minum, dan udara ruangan</span><span>Rp25.000</span></div>
+      <div class="val-row"><span>Pemeliharaan 30 Hari, Reset Ulang, dan Reset Kilat 3 Hari</span><span>Rp60.000</span></div>
+      <div class="val-row"><span>Cadangan data dan pindah HP</span><span>Rp25.000</span></div>
+      <div class="val-total"><span>Total nilai wajar</span><span><s>Rp497.000</s></span></div>
+      <div class="price-now">
+        <div style="font-size:15px;color:var(--muted);font-weight:600;">Harga hari ini</div>
+        <div class="amt">Rp127.000</div>
+        <div class="sub">Sekali bayar. Akses selamanya. Semua fitur terbuka, tanpa paket basic dan premium.</div>
+      </div>
+      <p class="price-divider"><b>Rp127.000 untuk 12 kali reset.</b>Kalau kamu ulang sebulan sekali, sekitar Rp10.600 per reset di tahun pertama. Lebih murah dari segelas kopi susu yang biasanya kamu beli jam 3 sore. Setelah itu gak ada tagihan apa-apa lagi.</p>
+      <div class="cta-block center">
+        <a class="btn" href="checkout.html">Ambil Akses Superhuman Protocol → Rp127.000</a>
+        <p class="btn-note">Panduan Akses berisi kode masuk dikirim ke email yang kamu pakai saat order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARA DAPAT AKSES -->
+<section class="sec-alt akses">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Dari bayar sampai mulai, cuma tiga langkah.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="step-num">1</div>
+        <h4>Selesaikan pembayaran</h4>
+        <p>Bisa pakai QRIS, transfer bank, atau e-wallet.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">2</div>
+        <h4>Cek email kamu</h4>
+        <p>Begitu pembayaran terkonfirmasi, kamu diarahkan ke halaman Pembayaran Berhasil, dan Panduan Akses berisi kode masuk dikirim ke email kamu. Kalau belum ada di kotak masuk, cek folder Spam atau Promosi.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">3</div>
+        <h4>Masukkan kode, lalu isi Cek Beban</h4>
+        <p>Buka <span class="url">shp-kit.netlify.app</span>, masukkan kode dari email, lalu isi Cek Beban Tubuh sekitar 3 menit. Hari 0 bisa kamu siapkan malam ini, Hari 1 mulai besok pagi.</p>
+      </div>
+    </div>
+    <figure class="akses-shot">
+      <picture><source media="(min-width:800px)" srcset="img/masuk-kode-d.webp" width="1400" height="868"><img class="shot" data-zoom src="img/masuk-kode.webp" alt="Layar kode akses Superhuman Protocol dengan kolom kode dan tombol Buka Program" width="728" height="1568" loading="lazy"></picture>
+      <figcaption>Cukup satu kode. Tanpa bikin akun, tanpa password.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <h2 class="center" style="margin-bottom:26px;">Pertanyaan yang sering masuk</h2>
+      <div class="faq">
+        <details>
+          <summary>Ini harus di-install?</summary>
+          <div class="ans">Tidak. Superhuman Protocol dibuka lewat browser di HP, tablet, atau laptop. Supaya lebih cepat dibuka, kamu bisa menyimpannya ke layar utama HP seperti aplikasi biasa.</div>
+        </details>
+        <details>
+          <summary>Gimana cara masuk setelah bayar?</summary>
+          <div class="ans">Setelah pembayaran terkonfirmasi, kamu diarahkan ke halaman sukses, dan Panduan Akses berisi kode masuk dikirim ke email kamu. Buka shp-kit.netlify.app, masukkan kodenya, lalu tap Buka Program.</div>
+        </details>
+        <details>
+          <summary>Perlu bikin akun atau password?</summary>
+          <div class="ans">Tidak. Cukup kode akses. Kalau ganti HP atau ganti browser, masukkan kode yang sama.</div>
+        </details>
+        <details>
+          <summary>Kodenya ditolak.</summary>
+          <div class="ans">Pastikan kamu membuka shp-kit.netlify.app, lalu ketik atau salin kode dari email apa adanya. Spasi atau huruf aneh yang ikut tersalin dari PDF otomatis dirapikan.</div>
+        </details>
+        <details>
+          <summary>Butuh waktu berapa lama sehari?</summary>
+          <div class="ans">Tiap langkah maksimal 10 menit, dan sebagian besar cuma minum, makan, atau jalan sebentar yang memang sudah ada di harimu. Cek Beban di awal sekitar 3 menit, check-in cuma beberapa detik.</div>
+        </details>
+        <details>
+          <summary>Aku harus berhenti ngopi?</summary>
+          <div class="ans">Tidak. Kopinya diturunkan bertahap sesuai rencana yang disusun di Hari 0, dan jam kopi terakhir dimajukan. Supaya gak sakit kepala, gak ada yang distop mendadak.</div>
+        </details>
+        <details>
+          <summary>Harus puasa atau minum jus?</summary>
+          <div class="ans">Tidak. Kamu tetap makan tiga kali sehari plus camilan. Itu justru yang membedakannya dari jus detoks.</div>
+        </details>
+        <details>
+          <summary>Harus beli suplemen atau produk khusus?</summary>
+          <div class="ans">Tidak. Semua bahannya ada di pasar atau minimarket, dan daftar belanjanya sudah disusun. Satu-satunya obat yang disebut adalah obat cacing bebas di Hari 4, sesuai label kemasan, dan itu pun tidak dipakai di Jalur Aman.</div>
+        </details>
+        <details>
+          <summary>Aku sering dinas dan makan di luar. Bisa?</summary>
+          <div class="ans">Bisa. Masukkan jadwal meeting atau perjalananmu di Agenda, nyalakan Hari Padat kalau perlu, dan buka Makan di Luar untuk tahu apa yang diambil di warteg, nasi padang, warung tenda, fast food, atau minimarket.</div>
+        </details>
+        <details>
+          <summary>Kalau satu hari berantakan, harus ulang dari nol?</summary>
+          <div class="ans">Tidak. Tekan Hari Ini Kacau, hari itu diulang besok pagi. Kemajuanmu tetap tersimpan, jadwalnya cuma bergeser.</div>
+        </details>
+        <details>
+          <summary>Aku punya penyakit, hamil, atau minum obat rutin.</summary>
+          <div class="ans">Tandai saat Cek Beban. Program otomatis memakai Jalur Aman: perubahan makan dibuat bertahap dan langkah obat cacing diganti versi ringan. Tetap bicarakan dulu dengan dokter yang biasa menanganimu sebelum mengubah pola makan.</div>
+        </details>
+        <details>
+          <summary>Setelah Hari 5, terus ngapain?</summary>
+          <div class="ans">Lanjut Pemeliharaan 30 Hari. Kapan pun badanmu mulai drop lagi, tekan Reset Ulang, penuh 5 hari atau Reset Kilat 3 hari.</div>
+        </details>
+        <details>
+          <summary>Kalau ganti HP, datanya ikut?</summary>
+          <div class="ans">Bisa. Simpan cadangan dulu dari menu Pengaturan. Di HP baru, masuk dengan kode yang sama, lalu pulihkan dari cadangan.</div>
+        </details>
+        <details>
+          <summary>Ada biaya bulanan?</summary>
+          <div class="ans">Tidak ada. Sekali bayar, semua fitur langsung terbuka, dan bisa dipakai ulang kapan saja.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="sec-deep">
+  <div class="wrap">
+    <div class="narrow center">
+      <h2>Minggu depan ada closing jam 3 sore. Di hari itu, kamu mau otakmu nyala, bukan nyari kopi ketiga.</h2>
+      <p class="lead" style="margin-top:20px;">Kamu sudah coba tidur lebih awal. Sudah coba kopi yang lebih mahal. Sudah coba jus detoks, dan menyerah sebelum sore.</p>
+      <p class="lead">Bukan karena kamu lemah. Karena selama ini tubuhmu gak pernah dikasih urutan yang benar untuk membereskan bebannya.</p>
+      <p class="closing-line">Hari pertamamu cuma sarapan telur, dua gelas air, dan jalan 10 menit jam 3 sore.</p>
+      <div class="cta-block">
+        <a class="btn" href="checkout.html">Mulai Reset 5 Hari → Rp127.000</a>
+        <p class="btn-note">Sekali bayar. Akses selamanya. Buka dari browser HP atau laptop, gak perlu download dari Play Store.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="logo">Superhuman <em>Protocol</em></span>
+    <small>© 2026 Superhuman Protocol. Semua hak dilindungi.</small>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sp">
+    <b><s>Rp497.000</s>Rp127.000</b>
+    <small>Sekali bayar, akses selamanya</small>
+  </div>
+  <a class="btn" href="checkout.html">Mulai Reset</a>
+</div>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan program diperbesar">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Tutup gambar">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="#0F2A30" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lb-inner"><img id="lbImg" src="" alt=""></div>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('stickyCta');
+  var hero=document.querySelector('.hero');
+  if(!bar||!hero)return;
+  document.body.classList.add('has-sticky');
+  function check(){bar.classList.toggle('on',hero.getBoundingClientRect().bottom<0);}
+  check();
+  window.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('resize',check);
+})();
+(function(){
+  var track=document.querySelector('.testi-grid');
+  var dots=document.getElementById('testiDots');
+  if(!track||!dots)return;
+  var slides=track.querySelectorAll('img');
+  var btns=dots.querySelectorAll('button');
+  function active(){
+    var mid=track.scrollLeft+track.clientWidth/2,best=0,min=Infinity;
+    for(var i=0;i<slides.length;i++){
+      var c=slides[i].offsetLeft+slides[i].offsetWidth/2,d=Math.abs(c-mid);
+      if(d<min){min=d;best=i;}
+    }
+    for(var j=0;j<btns.length;j++)btns[j].classList.toggle('on',j===best);
+  }
+  var t;
+  track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(active,60);},{passive:true});
+  for(var k=0;k<btns.length;k++){
+    btns[k].addEventListener('click',function(){
+      var el=slides[Number(this.getAttribute('data-i'))];
+      if(!el)return;
+      track.scrollTo({left:el.offsetLeft-(track.clientWidth-el.offsetWidth)/2,behavior:'smooth'});
+    });
+  }
+  active();
+})();
+(function(){
+  var lb=document.getElementById('lightbox'),img=document.getElementById('lbImg'),close=document.getElementById('lbClose');
+  var last=null;
+  function open(src,alt){
+    img.src=src;img.alt=alt||'';
+    lb.classList.add('on');document.body.style.overflow='hidden';close.focus();
+  }
+  function shut(){lb.classList.remove('on');img.src='';document.body.style.overflow='';if(last)last.focus();}
+  var zs=document.querySelectorAll('[data-zoom]');
+  for(var i=0;i<zs.length;i++){
+    zs[i].setAttribute('tabindex','0');
+    zs[i].setAttribute('role','button');
+    zs[i].addEventListener('click',function(){last=this;open(this.currentSrc||this.src,this.alt);});
+    zs[i].addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}});
+  }
+  close.addEventListener('click',shut);
+  lb.addEventListener('click',function(e){if(e.target===lb)shut();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))shut();});
+})();
+</script>
+</body>
+</html>
