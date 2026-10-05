@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kegel King | Latih 3 Otot Dasar Panggul 5 Menit Sehari</title>
+<meta name="description" content="App latihan 3 otot dasar panggul pria. Tes kondisi, sesi terpandu 5 menit dengan figur bergerak, program 12 minggu, dan jurnal mingguan. Tanpa obat.">
+<meta property="og:title" content="Kegel King | Latih 3 Otot Dasar Panggul 5 Menit Sehari">
+<meta property="og:description" content="App latihan 3 otot dasar panggul pria. Tes kondisi, sesi terpandu 5 menit dengan figur bergerak, program 12 minggu, dan jurnal mingguan. Tanpa obat.">
+<meta name="theme-color" content="#1B2F5B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pri:#1B2F5B;
+  --pri-deep:#111F3E;
+  --pri-mid:#2F4B86;
+  --pri-soft:#E8ECF5;
+  --gold:#D9A441;
+  --gold-deep:#B5862E;
+  --gold-text:#7F5A14;
+  --gold-soft:#F7ECD3;
+  --gold-ink:#0F1B33;
+  --green:#2F8A5F;
+  --green-soft:#E3F1EA;
+  --red:#C24A3B;
+  --red-soft:#FBEAE7;
+  --pc:#2E9C95;
+  --bulbo:#E0A43A;
+  --ischio:#7A68D8;
+  --bg:#F5F2EA;
+  --card:#FFFFFF;
+  --line:#DEDCD6;
+  --line-soft:#E9E7E1;
+  --ink:#13213A;
+  --muted:#52607A;
+  --muted-light:#6E7A90;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --radius:14px;
+  --radius-lg:20px;
+  --maxw:1120px;
+  --maxw-text:680px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;line-height:1.65;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;}
+h1,h2,h3,h4{margin:0;line-height:1.18;letter-spacing:-0.01em;color:var(--pri);}
+h1,h2,h3{font-family:var(--serif);font-weight:700;}
+h1{font-size:clamp(30px,5.8vw,48px);}
+h2{font-size:clamp(25px,4.2vw,36px);}
+h3{font-size:clamp(21px,2.8vw,26px);}
+h4{font-size:17px;font-weight:700;font-family:var(--sans);}
+p{margin:0 0 1rem;}
+p:last-child{margin-bottom:0;}
+strong{font-weight:700;color:var(--pri);}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+.narrow{max-width:var(--maxw-text);margin-left:auto;margin-right:auto;}
+section{padding:56px 0;}
+@media(min-width:768px){section{padding:76px 0;}}
+.sec-alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-deep{background:var(--pri-deep);color:#fff;}
+.sec-deep h2,.sec-deep h3{color:#fff;}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--pri-mid);margin:0 0 10px;}
+.eyebrow-gold{color:var(--gold-text);}
+.lead{font-size:clamp(17px,2vw,19px);color:var(--muted);}
+.sec-deep .lead{color:#C5CEDF;}
+.center{text-align:center;}
+
+/* header */
+.site-head{background:var(--card);border-bottom:1px solid var(--line);padding:14px 0;position:relative;z-index:5;}
+.logo{font-family:var(--sans);font-size:21px;font-weight:800;letter-spacing:-0.02em;color:var(--pri);}
+.logo em{font-style:normal;color:var(--gold-deep);}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--gold);color:var(--gold-ink);text-decoration:none;
+  font-weight:800;font-size:17px;letter-spacing:-0.01em;
+  padding:17px 28px;border-radius:12px;border:none;cursor:pointer;
+  box-shadow:0 2px 0 var(--gold-deep);
+  transition:transform .12s ease,box-shadow .12s ease;
+  text-align:center;width:100%;
+}
+@media(min-width:560px){.btn{width:auto;font-size:18px;padding:18px 34px;}}
+.btn:hover{transform:translateY(-1px);box-shadow:0 3px 0 var(--gold-deep);}
+.btn:active{transform:translateY(1px);box-shadow:0 1px 0 var(--gold-deep);}
+.btn:focus-visible{outline:3px solid var(--pri);outline-offset:3px;}
+.sec-deep .btn:focus-visible{outline-color:#fff;}
+.btn-note{font-size:14.5px;color:var(--muted);margin-top:12px;}
+.sec-deep .btn-note{color:#A9B3C4;}
+.cta-block{margin-top:26px;}
+
+/* hero */
+.hero{background:var(--card);padding:28px 0 44px;border-bottom:1px solid var(--line);}
+.hero-grid{display:block;}
+.hero-img{margin:22px -20px 24px;}
+@media(min-width:900px){
+  .hero{padding:64px 0 72px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1fr 460px;
+    grid-template-areas:"hd img" "rest img";
+    column-gap:56px;align-items:center;
+  }
+  .hero-hd{grid-area:hd;align-self:end;}
+  .hero-rest{grid-area:rest;align-self:start;padding-top:18px;}
+  .hero-img{grid-area:img;margin:0;align-self:center;}
+  .hero-img img{border-radius:var(--radius-lg);}
+}
+.hero-bullets{list-style:none;padding:0;margin:22px 0 0;}
+.hero-bullets li{position:relative;padding-left:30px;margin-bottom:12px;font-size:16.5px;color:var(--ink);}
+.hero-bullets li::before{
+  content:"";position:absolute;left:0;top:9px;width:16px;height:16px;border-radius:50%;
+  background:var(--green-soft);border:2px solid var(--green);
+}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;font-size:14.5px;color:var(--muted);font-weight:600;}
+.hero-facts span{white-space:nowrap;}
+
+/* cards */
+.grid{display:grid;gap:18px;}
+@media(min-width:760px){.grid-3{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr);}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+.sec-alt .card{background:var(--bg);}
+.card-quote{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--pri);margin:0 0 10px;line-height:1.3;}
+.card p{font-size:16px;color:var(--muted);}
+.card h3{margin-bottom:10px;}
+
+/* tiga otot */
+.pilar{border-left:4px solid var(--pri-mid);padding:4px 0 4px 18px;margin-bottom:20px;}
+.pilar.p-pc{border-color:var(--pc);}
+.pilar.p-bulbo{border-color:var(--bulbo);}
+.pilar.p-ischio{border-color:var(--ischio);}
+.pilar h4{margin-bottom:4px;color:var(--pri);}
+.pilar p{font-size:16px;color:var(--muted);margin:0;}
+.pilar p b{color:var(--pri);}
+.golden{margin-top:28px;font-family:var(--serif);font-size:26px;font-weight:700;color:var(--pri);margin-bottom:4px;line-height:1.25;}
+
+/* steps */
+.step{display:grid;gap:20px;padding:28px 0;border-top:1px solid var(--line);}
+.step:first-of-type,.narrow + .step{border-top:none;}
+@media(min-width:800px){
+  .step{grid-template-columns:1fr 300px;gap:56px;align-items:center;}
+  .step.dimg{grid-template-columns:1fr 1.35fr;gap:48px;}
+  .step-img{order:2;}
+}
+.step-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;
+  background:var(--pri);color:#fff;font-weight:800;font-size:16px;margin-bottom:12px;
+}
+.step-copy p{color:var(--muted);margin-top:10px;}
+.step-wide{display:block;}
+.step-wide .step-copy{max-width:var(--maxw-text);}
+
+/* screenshot frames */
+.shot{border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:0 1px 3px rgba(27,47,91,.07);}
+.shot-r{max-width:300px;width:100%;margin-left:auto;margin-right:auto;}
+@media(min-width:800px){.step .shot-r,.feat .shot-r{max-width:100%;}}
+[data-zoom]{cursor:zoom-in;}
+.m-only{display:inline;}
+@media(min-width:700px){.m-only{display:none;}}
+figure{margin:0;}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center;}
+
+/* feature rows */
+.feat{display:grid;gap:24px;padding:40px 0;border-top:1px solid var(--line);}
+@media(min-width:800px){
+  .feat.dimg{grid-template-columns:1fr 1.35fr;gap:48px;align-items:center;}
+  .feat.dimg.flip{grid-template-columns:1.35fr 1fr;}
+  .feat-img{order:2;}
+  .feat.flip .feat-img{order:1;}
+  .feat.flip .feat-copy{order:2;}
+}
+.feat-copy h3{margin-bottom:12px;}
+.feat-copy p{color:var(--muted);font-size:16.5px;}
+.feat-solo{padding:40px 0;border-top:1px solid var(--line);}
+.feat-solo .feat-copy{max-width:var(--maxw-text);}
+.feat-pair{padding-top:40px;border-top:1px solid var(--line);}
+
+/* jelas dari awal */
+.clear-card h3{margin-bottom:10px;}
+.clear-card p{color:var(--muted);font-size:16.5px;}
+.clear-yes{border-top:4px solid var(--green);}
+.clear-no{border-top:4px solid var(--gold-deep);}
+
+/* fit lists */
+.fitlist{list-style:none;padding:0;margin:0;}
+.fitlist li{position:relative;padding-left:30px;margin-bottom:13px;font-size:16.5px;}
+.fitlist li::before{position:absolute;left:0;top:0;font-weight:800;font-size:17px;}
+.fit-yes li::before{content:"✓";color:var(--green);}
+.fit-no li::before{content:"✕";color:var(--red);}
+
+/* table */
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;border:1px solid var(--line);border-radius:var(--radius);}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:15.5px;background:var(--card);}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
+thead th{font-size:13px;font-weight:700;color:var(--muted);border-bottom:2px solid var(--line);}
+thead th.hl{color:var(--pri);}
+tbody td.hl{font-weight:700;color:var(--pri);background:var(--pri-soft);}
+tbody th{font-weight:600;color:var(--ink);width:20%;}
+
+/* testimoni */
+.testi-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px 20px 6px;margin:0 -20px;}
+.testi-grid::-webkit-scrollbar{display:none;}
+.testi-grid img{flex:0 0 78%;scroll-snap-align:center;}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:16px;}
+.testi-dots button{width:8px;height:8px;padding:0;border:none;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s ease,width .2s ease;}
+.testi-dots button.on{background:var(--pri);width:22px;border-radius:5px;}
+.testi-dots button:focus-visible{outline:2px solid var(--pri);outline-offset:3px;}
+@media(min-width:700px){
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;overflow:visible;padding:0;margin:0;}
+  .testi-grid img{flex:none;}
+  .testi-dots{display:none;}
+}
+.testi-grid img{width:100%;height:auto;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:0 1px 3px rgba(27,47,91,.07);}
+
+/* price */
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 22px;max-width:620px;margin:0 auto;}
+@media(min-width:640px){.price-card{padding:36px;}}
+.price-card h3{font-size:clamp(21px,2.6vw,24px);}
+.incl{list-style:none;padding:0;margin:18px 0 0;}
+.incl li{position:relative;padding:10px 0 10px 30px;border-bottom:1px solid var(--line-soft);font-size:16px;}
+.incl li:last-child{border-bottom:none;}
+.incl li::before{content:"✓";position:absolute;left:0;top:10px;font-weight:800;color:var(--green);}
+.price-now{text-align:center;background:var(--gold-soft);border-radius:var(--radius);padding:22px;margin:24px 0 0;}
+.price-now .amt{font-size:clamp(36px,8vw,50px);font-weight:800;color:var(--pri);letter-spacing:-0.04em;line-height:1.1;}
+.price-now .sub{font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* faq */
+.faq-key{background:var(--bg);border:3px solid var(--gold);border-radius:var(--radius);padding:22px;margin-bottom:16px;}
+.faq-key h3{font-size:clamp(20px,3.2vw,24px);margin-bottom:12px;}
+.faq-key p{font-size:17.5px;color:var(--muted);margin:0 0 10px;}
+.faq-key ol{margin:0;padding:0 0 0 24px;font-size:clamp(17.5px,2.6vw,19px);line-height:1.5;}
+.faq-key li{margin-bottom:10px;padding-left:4px;}
+.faq-key li:last-child{margin-bottom:0;}
+.faq-key li::marker{font-weight:800;color:var(--gold-deep);}
+.faq-key b{color:var(--pri);}
+.faq{border-top:1px solid var(--line);margin-top:30px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;padding:18px 34px 18px 0;position:relative;font-weight:700;font-size:16.5px;color:var(--pri);list-style:none;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"";position:absolute;right:6px;top:26px;width:9px;height:9px;
+  border-right:2.5px solid var(--pri-mid);border-bottom:2.5px solid var(--pri-mid);
+  transform:rotate(45deg);transition:transform .18s ease;
+}
+.faq details[open] summary::after{transform:rotate(-135deg);top:28px;}
+.faq summary:focus-visible{outline:2px solid var(--pri);outline-offset:2px;}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:16.5px;}
+
+/* closing */
+.closing-line{font-family:var(--serif);font-size:25px;font-weight:700;color:#fff;margin-top:24px;line-height:1.3;}
+
+/* sticky bar */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;
+  background:var(--card);border-top:1px solid var(--line);padding:10px 16px;
+  box-shadow:0 -3px 14px rgba(27,47,91,.12);
+  display:flex;align-items:center;gap:12px;
+  transform:translateY(110%);transition:transform .25s ease;
+}
+.sticky-cta.on{transform:translateY(0);}
+.sticky-cta .sp{flex:1;min-width:0;}
+.sticky-cta .sp b{display:block;font-size:17px;color:var(--pri);line-height:1.2;}
+.sticky-cta .sp small{font-size:12.5px;color:var(--muted);}
+.sticky-cta .btn{width:auto;padding:14px 20px;font-size:15.5px;flex-shrink:0;}
+@media(min-width:900px){.sticky-cta{display:none;}}
+body.has-sticky{padding-bottom:82px;}
+@media(min-width:900px){body.has-sticky{padding-bottom:0;}}
+
+/* footer */
+.site-foot{background:var(--card);border-top:1px solid var(--line);padding:30px 0;text-align:center;}
+.site-foot .logo{display:block;margin-bottom:6px;}
+.site-foot small{font-size:13.5px;color:var(--muted-light);}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,14,28,.92);display:none;align-items:center;justify-content:center;padding:56px 12px 20px;}
+.lb.on{display:flex;}
+.lb-inner{max-width:1100px;width:100%;max-height:100%;overflow:auto;-webkit-overflow-scrolling:touch;border-radius:10px;}
+.lb img{width:auto;max-width:100%;max-height:84vh;margin:0 auto;border-radius:10px;}
+.lb-close{
+  position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;
+  background:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+}
+.lb-close:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+.lb-close svg{width:18px;height:18px;}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <div class="logo">Kegel <em>King</em></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-hd">
+        <h1>Bukan umurnya, ototnya yang belum dilatih. Latih 3 otot dasar panggul 5 menit sehari dari HP, tanpa obat.</h1>
+      </div>
+      <div class="hero-img">
+        <img src="img/hero-mockup.webp" alt="Kegel King, app latihan 3 otot dasar panggul pria 5 menit sehari, dipandu gerakan per gerakan" width="980" height="1232" fetchpriority="high">
+      </div>
+      <div class="hero-rest">
+        <p class="lead">Banyak pria menganggap tetesan setelah buang air kecil, bangun pagi yang gak ikut bangun, dan kerasnya yang berkurang sebagai urusan umur. Padahal ada tiga otot dasar panggul yang berperan di ketiganya, dan otot bisa dilatih. Kegel King adalah app di HP yang mengajakmu mengenali ototnya, melatihnya 5 menit sehari dengan figur yang bergerak, lalu mencatat kemajuanmu tiap minggu selama 12 minggu.</p>
+        <ul class="hero-bullets">
+          <li>Gak tahu ototnya yang mana? Tes 3 menit dan panduan 3 hari mengajarimu mengenalinya sebelum latihan dimulai.</li>
+          <li>Gak tahu harus latihan apa hari ini? Buka Hari Ini, tekan satu tombol, ikuti figur yang bergerak.</li>
+          <li>Biasanya berhenti di hari ke-4? Pengingat harian, streak, dan jurnal mingguan menjaga kamu tetap jalan.</li>
+        </ul>
+        <div class="cta-block">
+          <a class="btn" href="checkout.html">Ambil Akses Kegel King → Rp127.000</a>
+          <p class="btn-note">Dibuka dari browser HP atau laptop. Tanpa install, tanpa akun.</p>
+        </div>
+        <div class="hero-facts">
+          <span>5 menit per sesi</span>
+          <span>Program 12 minggu</span>
+          <span>10 gerakan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADEGAN MASALAH -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:34px;">
+      <h2>Baca tiga ini. Kalau ada satu yang kejadian bulan ini, kamu di tempat yang benar.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <p class="card-quote">“Kok basah lagi.”</p>
+        <p>Sudah selesai dari kamar mandi, celana sudah naik, dan beberapa menit kemudian terasa lembab. Kamu bilang ke diri sendiri ini wajar, namanya juga umur. Besoknya terulang.</p>
+      </div>
+      <div class="card">
+        <p class="card-quote">“Pagi, tapi gak ikut bangun.”</p>
+        <p>Dulu bangun tidur tubuhmu sudah siap sendiri. Sekarang berbulan-bulan tidak. Kamu bilang cuma capek, cuma kurang tidur, lalu gak mau mikir lebih jauh.</p>
+      </div>
+      <div class="card">
+        <p class="card-quote">“Mas capek ya?”</p>
+        <p>Istrimu bertanya pelan setelah malam yang selesai lebih cepat dari yang kamu mau. Dia gak protes, tapi kamu bisa lihat. Kamu diam, pura-pura ngantuk, dan mulai kepikiran beli obat kuat.</p>
+      </div>
+    </div>
+    <p class="narrow lead center" style="margin-top:30px;">Tiga adegan ini kelihatan beda, tapi ketiganya bisa berhubungan dengan satu hal yang bisa kamu kerjakan sendiri: otot dasar panggul yang belum pernah dilatih.</p>
+  </div>
+</section>
+
+<!-- REFRAME -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Bukan umurnya. Ototnya belum pernah dilatih.</h2>
+      <p style="margin-top:18px;">Selama ini otot paling penting di tubuhmu justru yang paling jarang disentuh. Di dasar panggul ada tiga otot, dan masing-masing punya tugas. Mereka bisa dilatih seperti otot lain, dengan gerakan yang tepat, bertahap, dan konsisten.</p>
+
+      <div style="margin-top:32px;">
+        <div class="pilar p-pc"><h4>Pubococcygeus</h4><p>Mengatur tetesan setelah buang air kecil. Dilatih lewat gerakan <b>Peras Tuntas</b>.</p></div>
+        <div class="pilar p-bulbo"><h4>Bulbospongiosus</h4><p>Mengatur kontrol. Dilatih lewat gerakan <b>Kedip Cepat</b>.</p></div>
+        <div class="pilar p-ischio"><h4>Ischiocavernosus</h4><p>Menjaga dan mengunci kekerasan. Dilatih lewat gerakan <b>Tahan Lama</b>.</p></div>
+      </div>
+
+      <p style="margin-top:26px;">Latihan otot dasar panggul sudah diteliti pada pria dengan keluhan ereksi dan kontrol, dengan evaluasi di minggu ke-6 sampai ke-12. Itu sebabnya programnya 12 minggu. Hasil tiap orang berbeda, dan app ini tidak menjanjikan hasil pasti.</p>
+
+      <p class="golden">Kenali ototnya dulu, baru dilatih.</p>
+      <p style="color:var(--muted);">Aturan yang dijaga app: program latihan baru terbuka setelah kamu lulus cek Temukan Otot.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARA KERJA -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:10px;">
+      <h2>Kamu gak perlu tahu harus mulai dari mana. App-nya yang nuntun.</h2>
+    </div>
+
+    <div class="step dimg">
+      <div class="step-copy">
+        <div class="step-num">1</div>
+        <h3>Jawab tes kondisi, sekitar 3 menit</h3>
+        <p>Sembilan pertanyaan singkat tentang tetesan, bangun pagi, kekerasan, kontrol, kebiasaan harian, dan riwayat kesehatan. Hasilnya: skor tiap otot dan jalur fokus programmu.</p>
+      </div>
+      <div class="step-img">
+        <picture><source media="(min-width:800px)" srcset="img/hasil-tes-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/hasil-tes.webp" alt="Layar Hasil cek otot berisi skor kondisi pubococcygeus, bulbospongiosus, dan ischiocavernosus, serta jalur fokus" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="step step-wide">
+      <div class="step-copy">
+        <div class="step-num">2</div>
+        <h3>Temukan ototnya, 3 hari</h3>
+        <p>Panduan sederhana untuk mengenali otot yang benar, lengkap dengan cek benar atau salah: perut, paha, dan bokong tidak ikut mengencang, napas tidak ditahan. Lulus cek, program terbuka.</p>
+      </div>
+    </div>
+
+    <div class="step step-wide">
+      <div class="step-copy">
+        <div class="step-num">3</div>
+        <h3>Latihan 5 menit dari halaman Hari Ini</h3>
+        <p>Tekan Mulai sesi, ikuti figur yang bergerak, tutup dengan relaksasi, lalu nilai sesimu: mudah, pas, berat, atau pegal.</p>
+      </div>
+    </div>
+
+    <div class="cta-block narrow center" style="margin-top:34px;">
+      <a class="btn" href="checkout.html">Ambil Akses Kegel King → Rp127.000</a>
+    </div>
+  </div>
+</section>
+
+<!-- FITUR -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center">
+      <h2>Yang kamu pakai tiap hari</h2>
+    </div>
+
+    <div class="feat dimg" style="border-top:none;">
+      <div class="feat-copy">
+        <p class="eyebrow">Sesi Terpandu</p>
+        <h3>Di kamar, sebelum tidur. Satu tombol, 5 menit.</h3>
+        <p style="margin-top:12px;">Figur di layar bergerak mengikuti hitungan: kencangkan, tahan, lepas. Kamu tinggal ikuti. Pilih panduan suara, getar, atau senyap kalau lagi gak mau berbunyi.</p>
+        <p>Tiap sesi dibuka dengan napas panggul dan ditutup relaksasi penuh.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:800px)" srcset="img/sesi-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/sesi.webp" alt="Sesi Terpandu gerakan Tahan Sambil Bergerak dengan figur pria duduk dan berdiri, hitungan tahan 4 detik, dan repetisi 1 dari 6" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat-solo">
+      <div class="feat-copy">
+        <p class="eyebrow">Program 12 Minggu</p>
+        <h3>Level naik sendiri. Turun sendiri kalau ototmu pegal.</h3>
+        <p style="margin-top:12px;">Tiga fase: Aktivasi, Kekuatan, lalu Fungsional, dari rebahan, duduk, sampai berdiri dan berjalan. Dari penilaianmu, level tiap gerakan naik kalau terasa mudah dan turun kalau berat atau pegal.</p>
+        <p>Maksimal 2 sesi sehari, karena otot butuh istirahat.</p>
+      </div>
+    </div>
+
+    <div class="feat flip dimg">
+      <div class="feat-copy">
+        <p class="eyebrow eyebrow-gold">Jurnal Mingguan</p>
+        <h3>Lihat sendiri apa yang berubah, tiap minggu.</h3>
+        <p style="margin-top:12px;">Cek mingguan 30 detik dengan empat indikator: tetesan, bangun pagi, kekerasan, dan kontrol, skala 1 sampai 5.</p>
+        <p>Hasilnya jadi grafik dari minggu ke minggu, jadi kamu tahu apa yang membaik dan apa yang perlu dijaga, bukan menebak.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:800px)" srcset="img/jurnal-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/jurnal.webp" alt="Layar Jurnal evaluasimu berisi ringkasan kemajuan dan grafik kemajuan otot skala 1 sampai 5 dari minggu ke minggu" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat-pair">
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Topiknya pribadi. App-nya juga.</h3>
+          <p>Gak ada akun dan password di dalam app. Catatan latihan dan jurnalmu tersimpan di HP kamu saja. Mau lebih tertutup, pasang PIN 4 angka. Ganti HP? Simpan file cadangan dari Pengaturan, lalu pulihkan di HP baru.</p>
+        </div>
+        <div class="card">
+          <h3>Yang bikin kamu bertahan sampai minggu ke-12.</h3>
+          <p>Latihan mandiri paling sering berhenti di hari-hari awal. Karena itu ada pengingat harian di jam pilihanmu, streak hari beruntun, dan gelar yang naik dari Prajurit, Panglima, sampai Raja.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPAYA JELAS -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Supaya jelas dari awal</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card clear-card clear-yes">
+        <h3>Kegel King bisa</h3>
+        <p>menilai kondisi 3 ototmu lewat tes, memandu kamu mengenali ototnya, menyusun sesi 5 menit, menaikkan atau menurunkan level sesuai penilaianmu, dan mencatat kemajuan tiap minggu.</p>
+      </div>
+      <div class="card clear-card clear-no">
+        <h3>Kegel King bukan</h3>
+        <p>obat, dokter, atau pengganti pemeriksaan. Keluhan ereksi, kontrol, atau tetesan bisa terkait kondisi lain seperti kencing manis, darah tinggi, atau kolesterol. Tes awal menanyakan riwayatmu. Kalau kamu mengalami nyeri saat buang air kecil, darah di urin atau sperma, atau ereksi hilang total mendadak, periksa ke dokter dulu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNTUK SIAPA -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 style="margin-bottom:16px;">Cocok kalau</h3>
+        <ul class="fitlist fit-yes">
+          <li>Kamu mulai merasa badanmu gak seperti dulu, dan malu ngomong ke dokter maupun teman.</li>
+          <li>Kamu pernah baca soal senam Kegel, tapi gak yakin ototnya yang mana, lalu berhenti setelah beberapa hari.</li>
+          <li>Kamu mau jalan yang gak bergantung pada obat kuat atau jamu.</li>
+          <li>Kamu butuh latihan yang bisa dilakukan sendiri di rumah, tanpa alat.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:16px;">Bukan untuk kamu kalau</h3>
+        <ul class="fitlist fit-no">
+          <li>Kamu cari hasil instan atau janji sembuh. Ini latihan, hasilnya bertahap dan beda tiap orang.</li>
+          <li>Kamu punya nyeri, darah, atau ereksi hilang mendadak. Periksa ke dokter dulu.</li>
+          <li>Kamu cari app yang mengukur ototmu otomatis atau chat dengan pakar. Penilaian di sini datang dari dirimu sendiri.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERBANDINGAN -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Kenapa app, bukan cara yang sekarang.</h2>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Obat kuat atau jamu</th>
+            <th>Artikel gratis dan timer HP</th>
+            <th>App kegel luar negeri</th>
+            <th class="hl">Kegel King</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th>Yang dikerjakan</th><td>Menunggu efek dari luar</td><td>Baca, lalu jalan sendiri</td><td>Timer dan paket latihan</td><td class="hl">Melatih 3 otot satu per satu</td></tr>
+          <tr><th>Tahu ototnya yang mana</th><td>Tidak ada</td><td>Disuruh cari sendiri</td><td>Tergantung app</td><td class="hl">Tes awal dan Temukan Otot</td></tr>
+          <tr><th>Naik level</th><td>Tidak ada</td><td>Tidak ada</td><td>Tergantung app</td><td class="hl">Otomatis dari penilaianmu</td></tr>
+          <tr><th>Memantau kemajuan</th><td>Tidak ada</td><td>Pakai ingatan</td><td>Tergantung app</td><td class="hl">Jurnal mingguan 4 indikator</td></tr>
+          <tr><th>Bahasa dan harga</th><td>Dibeli berulang</td><td>Gratis</td><td>Umumnya Inggris, dolar</td><td class="hl">Indonesia, Rp127.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Cerita dari yang sudah pakai.</h2>
+      <p class="lead" style="margin-top:12px;"><span class="m-only">Geser untuk melihat cerita lainnya. </span>Nomor disensor untuk menjaga privasi.</p>
+    </div>
+    <div class="testi-grid">
+      <img src="img/testi1.webp" alt="Screenshot WhatsApp: pengguna bercerita bangun pagi dalam keadaan tegang lagi dan menunjukkan app ke istrinya" width="392" height="784" loading="lazy">
+      <img src="img/testi2.webp" alt="Screenshot WhatsApp: pengguna bercerita setelah 2 minggu latihan dan Protokol Kontrol, ia lebih bisa mengatur dan istrinya menyadari perubahannya" width="392" height="784" loading="lazy">
+      <img src="img/testi3.webp" alt="Screenshot WhatsApp: pengguna bercerita malam itu ia memakai semua yang dilatih, dan hari-hari setelahnya hubungan dengan istrinya berubah" width="392" height="784" loading="lazy">
+    </div>
+    <div class="testi-dots" id="testiDots" aria-hidden="true">
+      <button type="button" class="on" data-i="0" aria-label="Testimoni 1"></button>
+      <button type="button" data-i="1" aria-label="Testimoni 2"></button>
+      <button type="button" data-i="2" aria-label="Testimoni 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- HARGA -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Harga yang masuk akal untuk 12 minggu latihan terpandu.</h2>
+      <p class="lead" style="margin-top:14px;">App kegel pria dari luar negeri umumnya berbahasa Inggris dan berlangganan dolar, dari sekitar Rp420 ribu per tahun sampai sekitar Rp148 ribu per minggu untuk paket mingguan. Kegel King berbahasa Indonesia, harganya dalam rupiah.</p>
+    </div>
+    <div class="price-card">
+      <h3 class="center">Yang kamu dapat begitu masuk</h3>
+      <ul class="incl">
+        <li>Tes kondisi 9 pertanyaan dan skor 3 otot</li>
+        <li>Panduan Temukan Otot 3 hari dengan cek mandiri</li>
+        <li>Sesi terpandu 5 menit dengan figur bergerak, suara, getar, atau senyap</li>
+        <li>Program 12 minggu, 10 gerakan, level naik atau turun otomatis</li>
+        <li>Jurnal mingguan, grafik kemajuan, dan Rapor Raja</li>
+        <li>Streak, gelar Prajurit, Panglima, Raja, dan pengingat harian</li>
+        <li>PIN privasi dan cadangan data</li>
+      </ul>
+      <div class="price-now">
+        <div style="font-size:15px;color:var(--muted);font-weight:600;">Harga hari ini</div>
+        <div class="amt">Rp127.000</div>
+        <div class="sub">Sekitar Rp1.500 per hari selama 12 minggu pertama.</div>
+      </div>
+      <div class="cta-block center">
+        <a class="btn" href="checkout.html">Ambil Akses Kegel King → Rp127.000</a>
+        <p class="btn-note">Panduan Akses berisi kode masuk dikirim ke email yang kamu pakai saat order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow">
+      <h2 class="center" style="margin-bottom:26px;">Pertanyaan yang sering masuk</h2>
+
+      <div class="faq-key">
+        <h3>Aku sudah bayar. Kodenya di mana?</h3>
+        <ol>
+          <li>Buka email pembelianmu.</li>
+          <li>Klik <b>link biru yang diawali drive.google.com</b>.</li>
+          <li>PDF Panduan Akses terbuka. Kodenya ada di dalamnya.</li>
+        </ol>
+      </div>
+
+      <div class="faq-key">
+        <h3>Aku sudah klik &quot;Unduh Produk&quot;, tapi gak ada kodenya.</h3>
+        <p>Tenang, kamu cuma salah klik. Balik ke email yang sama, lalu:</p>
+        <ol>
+          <li>Cari <b>link biru yang diawali drive.google.com</b>. Letaknya di atas tombol Unduh Produk.</li>
+          <li>Klik link itu, bukan tombolnya.</li>
+          <li>Kodenya ada di PDF Panduan Akses yang terbuka.</li>
+        </ol>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Kodenya ditolak.</summary>
+          <div class="ans">Pastikan kamu membuka kegelking.netlify.app, lalu ketik atau salin kode dari Panduan Akses apa adanya. Huruf besar kecil dan spasi yang ikut tersalin gak masalah.</div>
+        </details>
+        <details>
+          <summary>Ini app yang harus di-install?</summary>
+          <div class="ans">Tidak. Kegel King dibuka lewat browser di HP atau laptop. Supaya cepat dibuka, simpan ke layar utama HP seperti app biasa.</div>
+        </details>
+        <details>
+          <summary>Perlu bikin akun atau password?</summary>
+          <div class="ans">Tidak. Cukup satu kode akses. Ganti HP atau browser, masukkan kode yang sama.</div>
+        </details>
+        <details>
+          <summary>Orang lain bisa lihat datanya?</summary>
+          <div class="ans">Semua catatan tersimpan di HP-mu saja, bukan di server. Kamu juga bisa memasang PIN 4 angka di Pengaturan.</div>
+        </details>
+        <details>
+          <summary>Butuh waktu berapa lama sehari?</summary>
+          <div class="ans">Satu sesi sekitar 5 menit, maksimal 2 sesi sehari.</div>
+        </details>
+        <details>
+          <summary>Kapan terasa hasilnya?</summary>
+          <div class="ans">Beda tiap orang, dan gak ada janji hasil pasti. Studi tentang latihan otot dasar panggul mengevaluasi hasilnya di minggu ke-6 sampai ke-12, itu sebabnya programnya 12 minggu. Jurnal mingguan membantumu melihat sendiri perubahannya.</div>
+        </details>
+        <details>
+          <summary>Ototku pegal. Gimana?</summary>
+          <div class="ans">Pilih &quot;pegal&quot; saat menilai sesi, dan sesi berikutnya otomatis dibuat lebih ringan. Kalau pegalnya berlanjut atau terasa nyeri, istirahatkan dulu dan periksa ke dokter.</div>
+        </details>
+        <details>
+          <summary>Aku punya kencing manis atau darah tinggi. Boleh?</summary>
+          <div class="ans">Tes awal menanyakan riwayat dan rambu merah. Kegel King bukan pengganti dokter, jadi kalau kamu punya kondisi itu atau ada tanda bahaya, konsultasikan dulu.</div>
+        </details>
+        <details>
+          <summary>Kalau ganti HP, datanya ikut?</summary>
+          <div class="ans">Bisa. Simpan cadangan dari Pengaturan, masuk dengan kode yang sama di HP baru, lalu pulihkan dari cadangan.</div>
+        </details>
+        <details>
+          <summary>Ada biaya bulanan?</summary>
+          <div class="ans">Tidak ada.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="sec-deep">
+  <div class="wrap">
+    <div class="narrow center">
+      <h2>Malam ini kamu bisa mulai dari satu tes, sekitar 3 menit.</h2>
+      <p class="lead" style="margin-top:20px;">Kamu sudah coba cari obat, baca artikel, atau pura-pura gak kenapa-kenapa. Satu hal yang belum pernah kamu coba: melatih ototnya, dengan panduan yang jelas.</p>
+      <p class="closing-line">Hari pertamamu cuma satu tes.</p>
+      <div class="cta-block">
+        <a class="btn" href="checkout.html">Ambil Akses Kegel King → Rp127.000</a>
+        <p class="btn-note">Dibuka dari browser HP atau laptop. Tanpa install, tanpa akun.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="logo">Kegel <em>King</em></span>
+    <small>© 2026 Kegel King. Semua hak dilindungi.</small>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sp">
+    <b>Rp127.000</b>
+    <small>Buka dari HP, tanpa install</small>
+  </div>
+  <a class="btn" href="checkout.html">Ambil Akses</a>
+</div>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan app diperbesar">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Tutup gambar">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="#13213A" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lb-inner"><img id="lbImg" src="" alt=""></div>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('stickyCta');
+  var hero=document.querySelector('.hero');
+  if(!bar||!hero)return;
+  document.body.classList.add('has-sticky');
+  function check(){bar.classList.toggle('on',hero.getBoundingClientRect().bottom<0);}
+  check();
+  window.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('resize',check);
+})();
+(function(){
+  var track=document.querySelector('.testi-grid');
+  var dots=document.getElementById('testiDots');
+  if(!track||!dots)return;
+  var slides=track.querySelectorAll('img');
+  var btns=dots.querySelectorAll('button');
+  function active(){
+    var mid=track.scrollLeft+track.clientWidth/2,best=0,min=Infinity;
+    for(var i=0;i<slides.length;i++){
+      var c=slides[i].offsetLeft+slides[i].offsetWidth/2,d=Math.abs(c-mid);
+      if(d<min){min=d;best=i;}
+    }
+    for(var j=0;j<btns.length;j++)btns[j].classList.toggle('on',j===best);
+  }
+  var t;
+  track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(active,60);},{passive:true});
+  for(var k=0;k<btns.length;k++){
+    btns[k].addEventListener('click',function(){
+      var el=slides[Number(this.getAttribute('data-i'))];
+      if(!el)return;
+      track.scrollTo({left:el.offsetLeft-(track.clientWidth-el.offsetWidth)/2,behavior:'smooth'});
+    });
+  }
+  active();
+})();
+(function(){
+  var lb=document.getElementById('lightbox'),img=document.getElementById('lbImg'),close=document.getElementById('lbClose');
+  var last=null;
+  function open(src,alt){
+    img.src=src;img.alt=alt||'';
+    lb.classList.add('on');document.body.style.overflow='hidden';close.focus();
+  }
+  function shut(){lb.classList.remove('on');img.src='';document.body.style.overflow='';if(last)last.focus();}
+  var zs=document.querySelectorAll('[data-zoom]');
+  for(var i=0;i<zs.length;i++){
+    zs[i].setAttribute('tabindex','0');
+    zs[i].setAttribute('role','button');
+    zs[i].addEventListener('click',function(){last=this;open(this.currentSrc||this.src,this.alt);});
+    zs[i].addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}});
+  }
+  close.addEventListener('click',shut);
+  lb.addEventListener('click',function(e){if(e.target===lb)shut();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))shut();});
+})();
+</script>
+</body>
+</html>
