@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NUMBO | Bukan Anaknya Malas, Soalnya yang Bikin Bosan</title>
+<meta name="description" content="App petualangan matematika untuk anak TK sampai kelas 4. Lima soal sehari, soalnya naik turun ikut kemampuan anak, dan ada bantuan langkah demi langkah dari Kak Numi.">
+<meta property="og:title" content="NUMBO | Bukan Anaknya Malas, Soalnya yang Bikin Bosan">
+<meta property="og:description" content="App petualangan matematika untuk anak TK sampai kelas 4. Lima soal sehari, soalnya naik turun ikut kemampuan anak, dan ada bantuan langkah demi langkah dari Kak Numi.">
+<meta name="theme-color" content="#12301F">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='9' width='56' height='51' rx='14' fill='%235a4632'/%3E%3Crect x='4' y='4' width='56' height='52' rx='14' fill='%23f58a3c' stroke='%235a4632' stroke-width='3'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='34' fill='%23fff4de' stroke='%235a4632' stroke-width='2.5' paint-order='stroke'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  /* warna app NUMBO */
+  --krem:#FFF4DE;
+  --kuning:#FFC93C;
+  --kuning-deep:#B98612;
+  --oranye:#F58A3C;
+  --hijau:#6DBE85;
+  --biru:#5B9BD8;
+  --ungu:#A985DB;
+  --merah:#EF6F57;
+  --coklat:#5A4632;
+  --tinta:#2B2A28;
+  /* latar padang rumput gelap */
+  --bg:#163A2A;
+  --bg-alt:#1C4633;
+  --card:#21503B;
+  --card-in:#18402D;
+  --deep:#0F2A1E;
+  --line:rgba(255,244,222,.14);
+  --line-soft:rgba(255,244,222,.08);
+  --ink:#E3EEDF;
+  --muted:#B4CBB9;
+  --muted-light:#8EAB96;
+  --display:'Baloo 2','Trebuchet MS',system-ui,sans-serif;
+  --sans:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --radius:16px;
+  --radius-lg:22px;
+  --maxw:1120px;
+  --maxw-text:680px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:hidden;}
+::selection{background:rgba(255,201,60,.35);color:#fff;}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;}
+h1,h2,h3,h4{margin:0;color:var(--krem);}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.12;letter-spacing:-0.01em;}
+h1{font-size:clamp(34px,6.6vw,58px);line-height:1.04;}
+h2{font-size:clamp(27px,4.4vw,40px);}
+h3{font-size:clamp(22px,2.9vw,27px);}
+h4{font-size:18px;font-weight:800;font-family:var(--sans);line-height:1.3;}
+p{margin:0 0 1rem;}
+p:last-child{margin-bottom:0;}
+strong{font-weight:800;color:var(--krem);}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+.narrow{max-width:var(--maxw-text);margin-left:auto;margin-right:auto;}
+section{padding:58px 0;}
+@media(min-width:768px){section{padding:80px 0;}}
+.sec-alt{background:var(--bg-alt);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
+.lead{font-size:clamp(17px,2vw,19px);color:var(--muted);}
+.center{text-align:center;}
+
+/* logo blok huruf (CSS) */
+.logo{display:inline-flex;gap:5px;align-items:center;text-decoration:none;}
+.logo span{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:10px;
+  border:2.5px solid var(--coklat);box-shadow:0 3px 0 var(--coklat);
+  font-family:var(--display);font-weight:800;font-size:22px;line-height:1;padding-top:3px;
+  color:var(--krem);-webkit-text-stroke:3px var(--coklat);paint-order:stroke fill;
+}
+.logo span:nth-child(1){background:var(--oranye);transform:rotate(-4deg);}
+.logo span:nth-child(2){background:#3b82c4;transform:rotate(3deg) translateY(2px);}
+.logo span:nth-child(3){background:var(--hijau);transform:rotate(-2deg) translateY(-1px);}
+.logo span:nth-child(4){background:#9b6fd1;transform:rotate(4deg) translateY(2px);}
+.logo span:nth-child(5){background:var(--kuning);transform:rotate(-3deg);}
+.site-head{background:var(--deep);border-bottom:1px solid var(--line-soft);padding:13px 0 15px;}
+
+/* tombol gaya game */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--kuning);color:var(--tinta);text-decoration:none;
+  font-family:var(--display);font-weight:800;font-size:19px;line-height:1.2;
+  padding:15px 26px 13px;border-radius:16px;border:3px solid var(--tinta);cursor:pointer;
+  box-shadow:0 6px 0 var(--kuning-deep);
+  transition:transform .1s ease,box-shadow .1s ease;
+  text-align:center;width:100%;
+}
+@media(min-width:560px){.btn{width:auto;font-size:20px;padding:16px 34px 14px;}}
+.btn:hover{transform:translateY(-1px);box-shadow:0 7px 0 var(--kuning-deep);}
+.btn:active{transform:translateY(5px);box-shadow:0 1px 0 var(--kuning-deep);}
+.btn:focus-visible{outline:3px solid var(--krem);outline-offset:4px;}
+.btn-note{font-size:14.5px;color:var(--muted);margin-top:14px;}
+.cta-block{margin-top:26px;}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;padding:30px 0 46px;border-bottom:1px solid var(--line-soft);
+  background:
+    radial-gradient(55% 50% at 94% 0%,rgba(255,201,60,.30),rgba(255,201,60,0) 70%),
+    radial-gradient(45% 40% at 100% 40%,rgba(255,244,222,.10),rgba(255,244,222,0) 70%),
+    linear-gradient(180deg,#12301F 0%,#163A2A 100%);
+}
+.hero-kicker{display:inline-block;font-size:15px;font-weight:800;color:var(--tinta);background:var(--hijau);border:2px solid var(--tinta);border-radius:999px;padding:4px 14px;margin:0 0 16px;}
+.hero h1{color:#fff;}
+.hero h1 .l2{display:block;color:var(--kuning);}
+.hero .lead{color:#CFE0CF;}
+.hero-img{margin:24px -4px 26px;}
+.hero-img img{border-radius:var(--radius-lg);border:3px solid var(--tinta);box-shadow:0 10px 0 rgba(0,0,0,.25),0 30px 60px rgba(0,0,0,.4);}
+@media(min-width:900px){
+  .hero{padding:64px 0 76px;}
+  .hero-grid{display:grid;grid-template-columns:1fr 450px;grid-template-areas:"hd img" "rest img";column-gap:56px;align-items:center;}
+  .hero-hd{grid-area:hd;align-self:end;}
+  .hero-rest{grid-area:rest;align-self:start;padding-top:20px;}
+  .hero-img{grid-area:img;margin:0;align-self:center;transform:rotate(1.5deg);}
+}
+.hero-bullets{list-style:none;padding:0;margin:22px 0 0;}
+.hero-bullets li{position:relative;padding-left:32px;margin-bottom:12px;font-size:16.5px;color:var(--ink);}
+.hero-bullets li b{color:var(--krem);}
+.hero-bullets li::before{content:"";position:absolute;left:0;top:7px;width:18px;height:18px;border-radius:6px;background:var(--kuning);border:2px solid var(--tinta);transform:rotate(-6deg);}
+.hero-bullets li:nth-child(2)::before{background:var(--hijau);transform:rotate(5deg);}
+.hero-bullets li:nth-child(3)::before{background:var(--oranye);transform:rotate(-3deg);}
+.hero-price{display:flex;align-items:baseline;gap:12px;margin-top:26px;}
+.hero-price s{font-size:18px;color:var(--muted-light);font-weight:700;}
+.hero-price b{font-family:var(--display);font-size:36px;font-weight:800;color:#fff;line-height:1;}
+.hero-price + .cta-block{margin-top:14px;}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.pills span{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:800;color:var(--krem);background:rgba(255,244,222,.07);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;white-space:nowrap;}
+.pills i{width:10px;height:10px;border-radius:3px;display:inline-block;}
+
+/* cards */
+.grid{display:grid;gap:18px;}
+@media(min-width:760px){.grid-3{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr);}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+.sec-alt .card{background:var(--card-in);}
+.card p.card-quote{font-family:var(--display);font-size:23px;font-weight:800;color:var(--kuning);margin:0 0 10px;line-height:1.2;}
+.card p{font-size:16px;color:var(--muted);}
+
+/* mekanisme */
+.pilar{border-left:5px solid var(--biru);padding:4px 0 4px 18px;margin-bottom:22px;}
+.pilar:nth-child(2){border-color:var(--hijau);}
+.pilar:nth-child(3){border-color:var(--oranye);}
+.pilar h4{margin-bottom:4px;}
+.pilar p{font-size:16.5px;color:var(--muted);margin:0;}
+.golden{margin-top:28px;font-family:var(--display);font-size:28px;font-weight:800;color:var(--kuning);line-height:1.2;margin-bottom:6px;}
+
+/* langkah mulai */
+.steps{margin-top:34px;}
+.step-card h3{font-size:22px;margin:14px 0 8px;}
+.step-card p{color:var(--muted);font-size:16px;}
+.blok{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;border:3px solid var(--tinta);box-shadow:0 4px 0 var(--tinta);font-family:var(--display);font-weight:800;font-size:24px;color:var(--tinta);padding-top:3px;}
+.b-or{background:var(--oranye);transform:rotate(-4deg);}
+.b-bi{background:#5B9BD8;transform:rotate(3deg);}
+.b-hi{background:var(--hijau);transform:rotate(-2deg);}
+.b-un{background:var(--ungu);transform:rotate(4deg);}
+.b-ku{background:var(--kuning);transform:rotate(-3deg);}
+
+/* fitur */
+.feat{display:grid;gap:24px;padding:42px 0;border-top:1px solid var(--line);}
+.narrow + .feat{border-top:none;}
+@media(min-width:860px){
+  .feat{grid-template-columns:1fr 1.35fr;gap:52px;align-items:center;}
+  .feat .feat-img{order:2;}
+  .feat.flip{grid-template-columns:1.35fr 1fr;}
+  .feat.flip .feat-img{order:1;}
+  .feat.flip .feat-copy{order:2;}
+}
+.feat-copy p.tag,.tag{display:inline-block;font-size:14px;font-weight:800;color:var(--tinta);border:2px solid var(--tinta);border-radius:999px;padding:3px 13px;margin:0 0 12px;}
+.feat-copy h3{margin-bottom:12px;}
+.feat-copy p{color:var(--muted);font-size:16.5px;}
+.shot{border:3px solid var(--tinta);border-radius:16px;background:#fff;box-shadow:0 8px 0 rgba(0,0,0,.22),0 22px 44px rgba(0,0,0,.32);}
+.shot-r{max-width:300px;width:100%;margin-left:auto;margin-right:auto;}
+@media(min-width:860px){.feat .shot-r{max-width:100%;}}
+[data-zoom]{cursor:zoom-in;}
+.m-only{display:inline;}
+@media(min-width:700px){.m-only{display:none;}}
+
+/* dunia */
+.dunia{margin-top:40px;background:var(--card-in);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 20px;}
+@media(min-width:640px){.dunia{padding:30px 32px;}}
+.dunia h3{font-size:23px;margin-bottom:6px;}
+.dunia > p{color:var(--muted);font-size:15.5px;}
+.dunia-row{display:flex;gap:16px;align-items:flex-start;padding:15px 0;border-top:1px solid var(--line-soft);}
+.dunia-row:first-of-type{border-top:none;}
+.dunia-row .blok{flex:0 0 44px;}
+.dunia-row b{display:block;color:var(--krem);font-size:16.5px;line-height:1.3;}
+.dunia-row div span{display:block;font-size:15.5px;line-height:1.5;color:var(--muted);}
+
+/* jelas dari awal */
+.clear-card h3{margin-bottom:10px;}
+.clear-card p{color:var(--muted);font-size:16.5px;}
+.clear-yes{border-top:5px solid var(--hijau);}
+.clear-no{border-top:5px solid var(--oranye);}
+.fitlist{list-style:none;padding:0;margin:0;}
+.fitlist li{position:relative;padding-left:30px;margin-bottom:13px;font-size:16.5px;}
+.fitlist li::before{position:absolute;left:0;top:0;font-weight:800;font-size:17px;}
+.fit-yes li::before{content:"✓";color:var(--hijau);}
+.fit-no li::before{content:"✕";color:var(--merah);}
+
+/* tabel */
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;border:1px solid var(--line);border-radius:var(--radius);}
+table{border-collapse:collapse;width:100%;min-width:700px;font-size:15.5px;background:var(--card);}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
+thead th{font-size:14px;font-weight:800;color:var(--muted);border-bottom:2px solid var(--line);}
+thead th.hl{color:var(--kuning);}
+tbody td{color:var(--muted);}
+tbody td.hl{font-weight:800;color:#fff;background:rgba(255,201,60,.10);}
+tbody th{font-weight:700;color:var(--ink);width:20%;}
+
+/* testimoni */
+.testi-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px 20px 6px;margin:0 -20px;}
+.testi-grid::-webkit-scrollbar{display:none;}
+.testi-grid img{flex:0 0 78%;scroll-snap-align:center;width:100%;height:auto;border:1px solid rgba(255,255,255,.12);border-radius:16px;box-shadow:0 14px 34px rgba(0,0,0,.35);}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:16px;}
+.testi-dots button{width:8px;height:8px;padding:0;border:none;border-radius:50%;background:rgba(255,244,222,.28);cursor:pointer;transition:background .2s ease,width .2s ease;}
+.testi-dots button.on{background:var(--kuning);width:22px;border-radius:5px;}
+.testi-dots button:focus-visible{outline:2px solid var(--krem);outline-offset:3px;}
+@media(min-width:700px){
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;overflow:visible;padding:0;margin:0;}
+  .testi-grid img{flex:none;}
+  .testi-dots{display:none;}
+}
+
+/* harga */
+.price-lead{max-width:var(--maxw-text);margin:12px auto 0;}
+.price-card{background:var(--card);border:2px solid rgba(255,201,60,.30);border-radius:var(--radius-lg);padding:26px 22px;max-width:640px;margin:0 auto;box-shadow:0 24px 60px rgba(0,0,0,.28);}
+@media(min-width:640px){.price-card{padding:36px;}}
+.price-card h3{font-size:clamp(22px,2.6vw,25px);}
+.val-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:15.5px;}
+.val-row span:last-child{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.val-total{display:flex;justify-content:space-between;gap:16px;padding:16px 0 0;font-weight:800;color:var(--krem);}
+.val-total s{color:var(--muted-light);font-weight:700;}
+.price-now{text-align:center;background:rgba(255,201,60,.10);border:1.5px solid rgba(255,201,60,.40);border-radius:var(--radius);padding:22px;margin:24px 0 0;}
+.price-now small{display:block;font-size:15px;font-weight:700;color:var(--muted);}
+.price-now .amt{font-family:var(--display);font-size:clamp(42px,9vw,56px);font-weight:800;color:var(--kuning);line-height:1.05;}
+.price-now .sub{font-size:15px;color:var(--muted);margin-top:4px;}
+.price-cta{text-align:center;margin-top:24px;}
+.price-cta .btn{width:100%;}
+
+/* akses */
+.akses-steps{margin-top:30px;}
+.akses-steps .card h4{margin:12px 0 6px;}
+.akses-steps .card p{font-size:16px;color:var(--muted);}
+.akses-steps .warn{color:var(--kuning);font-weight:800;}
+.url{font-weight:800;color:var(--kuning);white-space:nowrap;}
+
+/* faq */
+.faq{border-top:1px solid var(--line);}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;padding:18px 34px 18px 0;position:relative;font-weight:800;font-size:17px;color:#fff;list-style:none;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"";position:absolute;right:6px;top:26px;width:9px;height:9px;border-right:2.5px solid var(--kuning);border-bottom:2.5px solid var(--kuning);transform:rotate(45deg);transition:transform .18s ease;}
+.faq details[open] summary::after{transform:rotate(-135deg);top:28px;}
+.faq summary:focus-visible{outline:2px solid var(--krem);outline-offset:2px;}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:16.5px;}
+.faq .ans ol{margin:0;padding-left:22px;}
+.faq .ans li{margin-bottom:6px;}
+.faq .ans b{color:var(--krem);}
+
+/* penutup */
+.sec-deep{background:radial-gradient(70% 60% at 50% 115%,rgba(255,201,60,.22),rgba(255,201,60,0) 70%),var(--deep);}
+.sec-deep h2{color:#fff;}
+.sec-deep .lead{color:#BFD3C3;}
+.closing-line{font-family:var(--display);font-size:28px;font-weight:800;color:var(--kuning);margin-top:24px;line-height:1.2;}
+
+/* footer */
+.site-foot{background:var(--deep);border-top:1px solid var(--line-soft);padding:32px 0;text-align:center;}
+.site-foot .logo{margin-bottom:12px;}
+.site-foot small{display:block;font-size:13.5px;color:var(--muted-light);}
+
+/* sticky bar HP */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#12301F;border-top:1px solid var(--line);padding:10px 16px 12px;box-shadow:0 -6px 20px rgba(0,0,0,.35);display:flex;align-items:center;gap:12px;transform:translateY(115%);transition:transform .25s ease;}
+.sticky-cta.on{transform:translateY(0);}
+.sticky-cta .sp{flex:1;min-width:0;}
+.sticky-cta .sp b{display:block;font-size:18px;color:#fff;line-height:1.2;font-family:var(--display);}
+.sticky-cta .sp b s{font-size:13px;color:var(--muted-light);font-weight:700;margin-right:6px;font-family:var(--sans);}
+.sticky-cta .sp small{font-size:12.5px;color:var(--muted);}
+.sticky-cta .btn{width:auto;padding:11px 20px 9px;font-size:17px;flex-shrink:0;box-shadow:0 4px 0 var(--kuning-deep);}
+@media(min-width:900px){.sticky-cta{display:none;}}
+body.has-sticky{padding-bottom:84px;}
+@media(min-width:900px){body.has-sticky{padding-bottom:0;}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,28,19,.94);display:none;align-items:center;justify-content:center;padding:56px 12px 20px;}
+.lb.on{display:flex;}
+.lb-inner{max-width:1100px;width:100%;max-height:100%;overflow:auto;-webkit-overflow-scrolling:touch;border-radius:10px;}
+.lb img{width:auto;max-width:100%;max-height:84vh;margin:0 auto;border-radius:10px;}
+.lb-close{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;background:var(--krem);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.lb-close:focus-visible{outline:3px solid var(--kuning);outline-offset:2px;}
+.lb-close svg{width:18px;height:18px;}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <div class="logo" aria-label="NUMBO"><span>N</span><span>U</span><span>M</span><span>B</span><span>O</span></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-hd">
+        <p class="hero-kicker">Untuk anak TK sampai kelas 4</p>
+        <h1>Bukan anaknya malas. <span class="l2">Soalnya yang bikin bosan.</span></h1>
+      </div>
+      <div class="hero-img">
+        <img src="img/hero-mockup.webp" alt="NUMBO, matematika jadi petualangan untuk TK sampai kelas 4, bersama Kak Numi dan teman-teman hewannya di padang rumput" width="980" height="1232" fetchpriority="high">
+      </div>
+      <div class="hero-rest">
+        <p class="lead">Anak yang kabur tiap lihat buku latihan bisa minta main matematika sendiri, kalau latihannya terasa seperti petualangan. NUMBO adalah app di HP tempat anakmu berpetualang di padang rumput bareng Kak Numi. Lima soal sehari, soalnya naik turun ikut kemampuannya, dan tiap kali bingung ada bantuan langkah demi langkah.</p>
+        <ul class="hero-bullets">
+          <li><b>Lihat buku latihan langsung kabur?</b> Satu sesi cuma 5 soal. Selesai, dapat bintang dan teman hewan baru.</li>
+          <li><b>Soalnya kesusahan atau kegampangan?</b> 4 benar beruntun, soal naik level. 2 salah, turun lagi. Otomatis.</li>
+          <li><b>Kamu bingung cara jelasinnya?</b> Tombol "Bantu aku, Kak" memperagakan caranya langsung di layar.</li>
+        </ul>
+        <div class="hero-price"><s>Rp497.000</s><b>Rp127.000</b></div>
+        <div class="cta-block">
+          <a class="btn" href="checkout.html">Mulai Petualangan NUMBO → Rp127.000</a>
+          <p class="btn-note">Dibuka dari browser HP, tablet, atau laptop. Tanpa install, tanpa akun.</p>
+        </div>
+        <div class="pills">
+          <span><i style="background:var(--hijau)"></i>5 dunia, TK sampai kelas 4</span>
+          <span><i style="background:var(--kuning)"></i>48 misi hitung</span>
+          <span><i style="background:var(--oranye)"></i>12 teman hewan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADEGAN -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:34px;">
+      <h2>Baca tiga ini. Kalau ada satu yang kejadian minggu ini, kamu di tempat yang benar.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <p class="card-quote">“Ma, aku gak bisa.”</p>
+        <p>Jam 8 malam, PR pengurangan pinjam meminjam. Kamu sudah jelasin tiga kali, dan ternyata caramu beda dengan cara gurunya. Ujungnya dia nangis di meja, kamu ikut naik nada, dan PR-nya tetap belum selesai.</p>
+      </div>
+      <div class="card">
+        <p class="card-quote">“Udah, Ma? Boleh nonton?”</p>
+        <p>Buku latihan yang kamu beli baru terisi dua halaman. Lembar yang kamu print baru dua soal. Lima menit kemudian dia sudah ketawa di depan YouTube.</p>
+      </div>
+      <div class="card">
+        <p class="card-quote">“Perkaliannya masih pakai jari, Bu.”</p>
+        <p>Wali kelas bilang pelan waktu ambil rapor. Kamu senyum, bilang nanti dilatih di rumah. Di jalan pulang kamu mikir, dilatih pakai apa, kalau tiap latihan selalu berakhir drama.</p>
+      </div>
+    </div>
+    <p class="narrow lead center" style="margin-top:30px;">Tiga adegan ini kelihatan beda. Akarnya sama, dan bukan karena anakmu kurang pintar atau kamu kurang sabar.</p>
+  </div>
+</section>
+
+<!-- MEKANISME -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Anak gak benci matematika. Dia benci merasa gak bisa.</h2>
+      <p style="margin-top:18px;">Coba ingat latihan yang biasa dia dapat. Dua puluh soal sekaligus, tingkat kesulitannya sama dari nomor satu sampai terakhir, dan kalau salah yang dia terima cuma coretan merah. Buat anak yang belum paham, itu dua puluh kali merasa gagal berturut-turut. Wajar kalau dia kabur di soal ketiga.</p>
+      <p>NUMBO membalik urutannya. Dia merasa bisa dulu, baru soalnya pelan-pelan naik.</p>
+      <div style="margin-top:32px;">
+        <div class="pilar"><h4>Gambar dulu, baru angka.</h4><p>Ten-frame, garis bilangan, kelompok benda, hitung bersusun. Anak melihat kenapa jawabannya begitu, bukan sekadar menghafal.</p></div>
+        <div class="pilar"><h4>Soalnya ikut kemampuan dia.</h4><p>4 benar beruntun, soal naik level. 2 salah beruntun, turun lagi. Gak kegampangan sampai bosan, gak kesusahan sampai nyerah.</p></div>
+        <div class="pilar"><h4>Salah itu dibantu, bukan dimarahi.</h4><p>Kak Numi menenangkan, lalu memperagakan caranya. Jawabannya tetap dia yang pilih.</p></div>
+      </div>
+      <p class="golden">Lima soal sehari, tiap hari.</p>
+      <p style="color:var(--muted);">Bukan lima puluh soal sekali lalu berhenti.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARA MULAI -->
+<section>
+  <div class="wrap">
+    <div class="narrow center">
+      <h2>Kamu gak perlu nyiapin soal. App-nya yang nuntun.</h2>
+    </div>
+    <div class="grid grid-3 steps">
+      <div class="card step-card">
+        <span class="blok b-or">1</span>
+        <h3>Masukkan kode akses</h3>
+        <p>Kodenya ada di Panduan Akses di emailmu. Cukup sekali, setelah itu tersimpan.</p>
+      </div>
+      <div class="card step-card">
+        <span class="blok b-bi">2</span>
+        <h3>Tambah anak, pilih kelasnya</h3>
+        <p>NUMBO langsung membuka dunia yang sesuai kelasnya. Punya dua anak? Tambahkan saja, masing-masing punya peta sendiri.</p>
+      </div>
+      <div class="card step-card">
+        <span class="blok b-hi">3</span>
+        <h3>Tekan Main Sekarang</h3>
+        <p>Lima soal, dapat bintang, misi hari itu beres.</p>
+      </div>
+    </div>
+    <div class="cta-block center" style="margin-top:36px;">
+      <a class="btn" href="checkout.html">Mulai Petualangan NUMBO → Rp127.000</a>
+    </div>
+  </div>
+</section>
+
+<!-- FITUR -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:6px;">
+      <h2>Yang dibuka anakmu tiap hari</h2>
+    </div>
+
+    <div class="feat">
+      <div class="feat-copy">
+        <p class="tag" style="background:var(--hijau);">Peta Petualangan</p>
+        <h3>“Hari ini mau ke titik mana?”</h3>
+        <p>Lima dunia, dari Padang Rumput sampai Gunung. Tiap titik satu keterampilan, terbuka satu per satu setelah dapat 2 bintang. Anak melihat sendiri jalannya maju.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/peta-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/peta.webp" alt="Peta Dunia 2 Bukit: enam titik sudah selesai dengan bintang, titik 7 Pengurangan sampai 20 siap dimainkan, Kak Numi menyapa dengan bubble" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat flip">
+      <div class="feat-copy">
+        <p class="tag" style="background:var(--kuning);">Bantu aku, Kak</p>
+        <h3>“Satu kotak penuh itu 10, ya.”</h3>
+        <p>Saat bingung, anak tekan satu tombol dan Kak Numi memperagakan caranya di papan, langkah demi langkah. Bukan dikasih jawaban, tapi ditunjukkan jalannya.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/bantu-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/bantu.webp" alt="Soal hitung dengan dua ten-frame, bantuan Kak Numi menghitung bulatan satu per satu, empat pilihan jawaban di bawah" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-copy">
+        <p class="tag" style="background:var(--oranye);">Bintang dan teman baru</p>
+        <h3>“Kura-kura ingin berteman denganmu!”</h3>
+        <p>Lima benar, tiga bintang. Tiap dua titik selesai, satu teman hewan bergabung. Ada 12 yang bisa dikumpulkan, dan ini yang bikin dia minta main lagi besok.</p>
+      </div>
+      <div class="feat-img">
+        <picture><source media="(min-width:860px)" srcset="img/hasil-d.webp" width="1400" height="868"><img class="shot shot-r" data-zoom src="img/hasil.webp" alt="Layar hasil: 5 dari 5 benar, tiga bintang, kura-kura bergabung sebagai teman baru, titik berikutnya terbuka" width="728" height="1568" loading="lazy"></picture>
+      </div>
+    </div>
+
+    <div class="dunia narrow">
+      <h3>Yang dilatih di tiap dunia</h3>
+      <p>Beberapa contoh dari 48 misi hitung.</p>
+      <div class="dunia-row"><span class="blok b-hi">1</span><div><b>Padang Rumput, TK</b><span>Kenal angka, mana lebih banyak, bentuk dan pola</span></div></div>
+      <div class="dunia-row"><span class="blok b-bi">2</span><div><b>Bukit, Kelas 1</b><span>Tambah kurang sampai 20, pasangan 10, jam</span></div></div>
+      <div class="dunia-row"><span class="blok b-or">3</span><div><b>Sungai, Kelas 2</b><span>Tambah kurang bersusun, perkalian, uang rupiah</span></div></div>
+      <div class="dunia-row"><span class="blok b-un">4</span><div><b>Hutan, Kelas 3</b><span>Perkalian dan pembagian, pecahan, keliling</span></div></div>
+      <div class="dunia-row"><span class="blok b-ku">5</span><div><b>Gunung, Kelas 4</b><span>Pembagian bersusun, desimal, luas, sudut</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- JELAS DARI AWAL -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:30px;">
+      <h2>Supaya jelas dari awal</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card clear-card clear-yes">
+        <h3>NUMBO bisa</h3>
+        <p>Melatih 48 keterampilan matematika TK sampai kelas 4 lewat soal bergambar, menyesuaikan tingkat soal dengan kemampuan anak, memperagakan cara mengerjakan saat anak bingung, dan memberi alasan buat balik lagi besok.</p>
+      </div>
+      <div class="card clear-card clear-no">
+        <h3>NUMBO bukan</h3>
+        <p>Guru, bimbel, atau video pelajaran. NUMBO tidak menjelaskan materi baru dari nol dan tidak menjanjikan nilai naik. Tidak ada laporan khusus orang tua, kemajuan anak terlihat dari peta, bintang, dan teman yang dia kumpulkan.</p>
+      </div>
+    </div>
+    <div class="grid grid-2" style="margin-top:34px;">
+      <div>
+        <h3 style="margin-bottom:16px;">Cocok kalau</h3>
+        <ul class="fitlist fit-yes">
+          <li>Anakmu gampang bosan atau kabur tiap lihat buku latihan.</li>
+          <li>Kamu mau latihan singkat tiap hari tanpa harus nyiapin soal sendiri.</li>
+          <li>Kamu capek jadi "guru galak" tiap malam.</li>
+          <li>Kamu mau waktu anak pegang HP dipakai untuk hal yang berguna.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-bottom:16px;">Bukan untuk kamu kalau</h3>
+        <ul class="fitlist fit-no">
+          <li>Anakmu sudah kelas 5 atau 6. Materinya belum ada.</li>
+          <li>Kamu cari video pelajaran atau guru yang mengajar.</li>
+          <li>Kamu cari hasil instan.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERBANDINGAN -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:30px;">
+      <h2>Kenapa NUMBO, bukan cara yang sekarang.</h2>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th></th><th>Buku latihan</th><th>Video YouTube</th><th>Les atau bimbel</th><th class="hl">NUMBO</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Anak mau mulai sendiri</th><td>Harus disuruh</td><td>Mau, tapi nontonnya bukan matematika</td><td>Ikut jadwal</td><td class="hl">Ada misi harian dan teman yang ditunggu</td></tr>
+          <tr><th>Soal menyesuaikan</th><td>Sama untuk semua</td><td>Tidak ada soal</td><td>Tergantung guru</td><td class="hl">Naik turun otomatis tiap soal</td></tr>
+          <tr><th>Saat salah</th><td>Dicoret</td><td>Dilewati</td><td>Dibahas di pertemuan berikutnya</td><td class="hl">Diperagakan saat itu juga</td></tr>
+          <tr><th>Kapan</th><td>Saat kamu sempat mendampingi</td><td>Kapan saja</td><td>Hari dan jam tertentu</td><td class="hl">Kapan saja, 5 soal</td></tr>
+          <tr><th>Biaya</th><td>Beli buku tiap kelas</td><td>Gratis</td><td>Bayar tiap bulan</td><td class="hl">Rp127.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Cerita dari bunda yang anaknya sudah main.</h2>
+      <p class="lead" style="margin-top:12px;"><span class="m-only">Geser untuk melihat cerita lainnya. </span>Nomor disensor untuk menjaga privasi.</p>
+    </div>
+    <div class="testi-grid">
+      <img src="img/testi1.webp" alt="Screenshot WhatsApp: Zahra datang sendiri minta pinjam HP untuk main bareng Kak Numi, lalu mengajak ibunya ke teras dan menghitung pot bunga sampai sembilan tanpa loncat" width="392" height="784" loading="lazy">
+      <img src="img/testi2.webp" alt="Screenshot WhatsApp: Alya main 13 hari berturut-turut, mengingatkan bundanya jam 4 waktunya NUMBO, dan bisa membaca jam di sekolah" width="392" height="784" loading="lazy">
+      <img src="img/testi3.webp" alt="Screenshot WhatsApp: Daffa dapat 90 di ulangan perkalian setelah sebelumnya 60, katanya membayangkan kelompok seperti di NUMBO" width="392" height="784" loading="lazy">
+    </div>
+    <div class="testi-dots" id="testiDots" aria-hidden="true">
+      <button type="button" class="on" data-i="0" aria-label="Cerita 1"></button>
+      <button type="button" data-i="1" aria-label="Cerita 2"></button>
+      <button type="button" data-i="2" aria-label="Cerita 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- HARGA -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="narrow center" style="margin-bottom:28px;">
+      <h2>Kurang dari Rp2.700 per misi hitung.</h2>
+      <p class="lead price-lead">Satu buku latihan cuma untuk satu kelas, dan sering berhenti di halaman kedua. NUMBO berisi 48 misi hitung dari TK sampai kelas 4, soalnya jarang berulang, dan bisa dipakai lebih dari satu anak.</p>
+    </div>
+    <div class="price-card">
+      <h3 class="center" style="margin-bottom:20px;">Yang kamu dapat begitu masuk</h3>
+      <div class="val-row"><span>5 dunia petualangan, TK sampai kelas 4, 48 misi hitung</span><span>Rp150.000</span></div>
+      <div class="val-row"><span>Soal yang naik turun level otomatis dan jarang berulang</span><span>Rp90.000</span></div>
+      <div class="val-row"><span>Tombol "Bantu aku, Kak", peragaan langkah demi langkah</span><span>Rp80.000</span></div>
+      <div class="val-row"><span>Gambar bantu: ten-frame, garis bilangan, bersusun, jam, uang, pecahan</span><span>Rp60.000</span></div>
+      <div class="val-row"><span>Bintang, misi harian, streak, dan 12 teman hewan</span><span>Rp52.000</span></div>
+      <div class="val-row"><span>Bisa untuk lebih dari satu anak, tiap anak punya peta sendiri</span><span>Rp40.000</span></div>
+      <div class="val-row"><span>Dibuka dari HP, tablet, atau laptop tanpa install</span><span>Rp25.000</span></div>
+      <div class="val-total"><span>Total nilai wajar</span><span><s>Rp497.000</s></span></div>
+      <div class="price-now">
+        <small>Harga hari ini</small>
+        <div class="amt">Rp127.000</div>
+        <p class="sub">Semua dunia langsung bisa dipilih, tanpa paket basic dan premium.</p>
+      </div>
+      <div class="price-cta">
+        <a class="btn" href="checkout.html">Mulai Petualangan NUMBO → Rp127.000</a>
+        <p class="btn-note">Panduan Akses berisi kode masuk dikirim ke email yang kamu pakai saat order.</p>
+      </div>
+    </div>
+
+    <div class="narrow center" style="margin-top:58px;">
+      <h3>Dari bayar sampai main, tiga langkah.</h3>
+    </div>
+    <div class="grid grid-3 akses-steps">
+      <div class="card">
+        <span class="blok b-or">1</span>
+        <h4>Selesaikan pembayaran</h4>
+        <p>Bisa pakai QRIS, transfer bank, atau e-wallet.</p>
+      </div>
+      <div class="card">
+        <span class="blok b-bi">2</span>
+        <h4>Buka email, klik link biru</h4>
+        <p>Klik link biru yang diawali <b>drive.google.com</b>. <span class="warn">Bukan tombol "Unduh Produk".</span> Kalau belum ada di kotak masuk, cek folder Spam atau Promosi.</p>
+      </div>
+      <div class="card">
+        <span class="blok b-hi">3</span>
+        <h4>Masukkan kode, lalu main</h4>
+        <p>Buka <span class="url">numbomath.netlify.app</span>, masukkan kode, tambah anak, lalu main.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <h2 class="center" style="margin-bottom:28px;">Pertanyaan yang sering masuk</h2>
+      <div class="faq">
+        <details>
+          <summary>Aku sudah bayar. Kodenya di mana?</summary>
+          <div class="ans"><ol><li>Buka email pembelianmu.</li><li>Klik <b>link biru yang diawali drive.google.com</b>.</li><li>PDF Panduan Akses terbuka. Kodenya ada di dalamnya.</li></ol></div>
+        </details>
+        <details>
+          <summary>Aku sudah klik "Unduh Produk", tapi gak ada kodenya.</summary>
+          <div class="ans">Tenang, kamu cuma salah klik. Balik ke email yang sama, lalu:<ol style="margin-top:8px;"><li>Cari <b>link biru yang diawali drive.google.com</b>. Letaknya di atas tombol Unduh Produk.</li><li>Klik link itu, bukan tombolnya.</li><li>Kodenya ada di PDF Panduan Akses yang terbuka.</li></ol></div>
+        </details>
+        <details>
+          <summary>Kodenya ditolak.</summary>
+          <div class="ans">Pastikan kamu membuka <span class="url">numbomath.netlify.app</span>, lalu ketik atau salin kode dari Panduan Akses apa adanya. Huruf besar kecil dan spasi yang ikut tersalin gak masalah.</div>
+        </details>
+        <details>
+          <summary>Ini app yang harus di-install?</summary>
+          <div class="ans">Tidak. NUMBO dibuka lewat browser di HP, tablet, atau laptop. Supaya cepat dibuka, simpan ke layar utama HP seperti app biasa.</div>
+        </details>
+        <details>
+          <summary>Perlu bikin akun atau password?</summary>
+          <div class="ans">Tidak. Cukup satu kode akses.</div>
+        </details>
+        <details>
+          <summary>Bisa untuk berapa anak?</summary>
+          <div class="ans">Lebih dari satu. Tiap anak punya peta, bintang, dan teman sendiri.</div>
+        </details>
+        <details>
+          <summary>Kalau ganti HP, progresnya ikut?</summary>
+          <div class="ans">Belum. Kode yang sama tetap bisa dipakai di HP baru, tapi progres tersimpan di perangkat tempat anak bermain, jadi di HP baru mulai lagi dari awal.</div>
+        </details>
+        <details>
+          <summary>Butuh internet?</summary>
+          <div class="ans">Ya, NUMBO butuh koneksi internet saat dipakai.</div>
+        </details>
+        <details>
+          <summary>Anak TK yang belum lancar membaca bisa?</summary>
+          <div class="ans">Kalimat Kak Numi berupa teks, belum ada suara. Dampingi di awal, soalnya sendiri kebanyakan bergambar.</div>
+        </details>
+        <details>
+          <summary>Anakku kelas 2 tapi materi kelas 1-nya masih lemah.</summary>
+          <div class="ans">Dunia bisa dipilih bebas. Mulai saja dari dunia sebelumnya.</div>
+        </details>
+        <details>
+          <summary>Berapa lama sehari?</summary>
+          <div class="ans">Satu sesi 5 soal, dan misi harian beres setelah satu sesi. Mau main lagi juga boleh.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PENUTUP -->
+<section class="sec-deep">
+  <div class="wrap">
+    <div class="narrow center">
+      <h2>Malam ini cukup mulai dari 5 soal.</h2>
+      <p class="lead" style="margin-top:20px;">Kamu sudah coba buku latihan, video, sampai duduk di sebelahnya tiap malam. Yang belum pernah dicoba: latihan yang bikin dia merasa bisa duluan.</p>
+      <p class="closing-line">Hari pertamanya cuma lima soal.</p>
+      <div class="cta-block">
+        <a class="btn" href="checkout.html">Mulai Petualangan NUMBO → Rp127.000</a>
+        <p class="btn-note">Dibuka dari browser HP, tablet, atau laptop. Tanpa install, tanpa akun.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="logo" aria-label="NUMBO"><span>N</span><span>U</span><span>M</span><span>B</span><span>O</span></div>
+    <small>© 2026 NUMBO. Semua hak dilindungi.</small>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sp">
+    <b><s>Rp497.000</s>Rp127.000</b>
+    <small>Buka dari HP, tanpa install</small>
+  </div>
+  <a class="btn" href="checkout.html">Mulai</a>
+</div>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan NUMBO diperbesar">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Tutup gambar">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="#2B2A28" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lb-inner"><img id="lbImg" src="" alt=""></div>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('stickyCta');
+  var hero=document.querySelector('.hero');
+  if(!bar||!hero)return;
+  document.body.classList.add('has-sticky');
+  function check(){bar.classList.toggle('on',hero.getBoundingClientRect().bottom<0);}
+  check();
+  window.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('resize',check);
+})();
+(function(){
+  var track=document.querySelector('.testi-grid');
+  var dots=document.getElementById('testiDots');
+  if(!track||!dots)return;
+  var slides=track.querySelectorAll('img');
+  var btns=dots.querySelectorAll('button');
+  function active(){
+    var mid=track.scrollLeft+track.clientWidth/2,best=0,min=Infinity;
+    for(var i=0;i<slides.length;i++){
+      var c=slides[i].offsetLeft+slides[i].offsetWidth/2,d=Math.abs(c-mid);
+      if(d<min){min=d;best=i;}
+    }
+    for(var j=0;j<btns.length;j++)btns[j].classList.toggle('on',j===best);
+  }
+  var t;
+  track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(active,60);},{passive:true});
+  for(var k=0;k<btns.length;k++){
+    btns[k].addEventListener('click',function(){
+      var el=slides[Number(this.getAttribute('data-i'))];
+      if(!el)return;
+      track.scrollTo({left:el.offsetLeft-(track.clientWidth-el.offsetWidth)/2,behavior:'smooth'});
+    });
+  }
+  active();
+})();
+(function(){
+  var lb=document.getElementById('lightbox'),img=document.getElementById('lbImg'),close=document.getElementById('lbClose');
+  var last=null;
+  function open(src,alt){img.src=src;img.alt=alt||'';lb.classList.add('on');document.body.style.overflow='hidden';close.focus();}
+  function shut(){lb.classList.remove('on');img.src='';document.body.style.overflow='';if(last)last.focus();}
+  var zs=document.querySelectorAll('[data-zoom]');
+  for(var i=0;i<zs.length;i++){
+    zs[i].setAttribute('tabindex','0');
+    zs[i].setAttribute('role','button');
+    zs[i].addEventListener('click',function(){last=this;open(this.currentSrc||this.src,this.alt);});
+    zs[i].addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click();}});
+  }
+  close.addEventListener('click',shut);
+  lb.addEventListener('click',function(e){if(e.target===lb)shut();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))shut();});
+})();
+</script>
+</body>
+</html>
